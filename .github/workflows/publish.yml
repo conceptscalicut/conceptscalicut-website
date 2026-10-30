@@ -1,0 +1,40 @@
+name: Publish blog and send newsletter
+
+on:
+  schedule:
+    - cron: '17 3 * * 1'        # every Monday 03:17 UTC = 8:47 am India time
+  workflow_dispatch:             # "Run workflow" button: publish now
+    inputs:
+      force:
+        description: 'Deploy the website even if nothing new is waiting'
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ['blog/posts/**']     # a post saved in the editor (emails only if "Publish immediately")
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish and email new posts
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ vars.BREVO_LIST_ID }}
+          NEWSLETTER_MODE: ${{ vars.NEWSLETTER_MODE }}
+          FORCE_PUBLISH: ${{ inputs.force }}
+        run: python scripts/publish.py

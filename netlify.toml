@@ -1,0 +1,13 @@
+# Netlify builds the site from this repository.
+# Each production deploy costs credits on the free plan, so builds only run when something should go live:
+#   - a commit whose message contains [publish] (website updates, and the Monday publish run), or
+#   - a blog post saved in the editor with "Publish immediately" ticked and "Draft" unticked.
+# Everything else (drafts, edits waiting for Monday) is saved but not built.
+
+[build]
+  command = "python3 build/build.py"
+  publish = "dist"
+  ignore = "python3 scripts/should_build.py"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"

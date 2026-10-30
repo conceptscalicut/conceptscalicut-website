@@ -1,0 +1,85 @@
+# Concepts blog editor (Decap CMS). Opens at https://www.conceptscalicut.com/admin/
+# Team members log in with the email invite sent from Netlify (Project > Identity).
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: 'Blog: new post "{{slug}}"'
+    update: 'Blog: edit "{{slug}}"'
+    delete: 'Blog: delete "{{slug}}"'
+    uploadMedia: 'Blog: add photo "{{path}}"'
+    deleteMedia: 'Blog: remove photo "{{path}}"'
+
+site_url: https://www.conceptscalicut.com
+display_url: https://www.conceptscalicut.com
+logo_url: https://www.conceptscalicut.com/img/logo-mark-gold.png
+locale: en
+
+media_folder: site/img/blog
+public_folder: /img/blog
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    description: >-
+      New posts start as drafts. When a post is approved, untick Draft. It goes live at the next
+      Monday morning publish (9 am), or within a few minutes if you also tick "Publish immediately".
+      Posts with a future date wait for that date. Subscribers get an email when a post goes live.
+    folder: blog/posts
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    summary: "{{date}}  ·  {{title}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - { label: "Drafts", field: draft, pattern: true }
+      - { label: "Approved (live or scheduled)", field: draft, pattern: false }
+    fields:
+      - { label: "Title", name: title, widget: string, hint: "The headline. Aim for under 70 characters." }
+      - label: "Publish date"
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD MMM YYYY"
+        time_format: false
+        hint: "A future date schedules the post. It goes live on the first Monday publish on or after this date."
+      - { label: "Draft", name: draft, widget: boolean, default: true, hint: "Keep ticked while writing or reviewing. Untick when the post is approved to go live." }
+      - { label: "Publish immediately", name: publish_now, widget: boolean, default: false, required: false, hint: "Tick (with Draft unticked) and save to put the post live within a few minutes instead of waiting for Monday." }
+      - { label: "Category", name: category, widget: string, hint: "One or two words, for example Materials, Kitchens, Lighting, Decor, Projects." }
+      - { label: "Cover photo", name: image, widget: image, hint: "A landscape photo works best. Phone photos are fine; the website resizes them." }
+      - label: "Cover photo focus"
+        name: image_position
+        widget: select
+        required: false
+        default: ""
+        options:
+          - { label: "Centre", value: "" }
+          - { label: "Top", value: "center 20%" }
+          - { label: "Bottom", value: "center 80%" }
+      - { label: "Short summary", name: summary, widget: text, hint: "One or two sentences. Shown on the blog cards and in the subscriber email." }
+      - { label: "Google description (optional)", name: description, widget: text, required: false, hint: "About 150 characters for Google search results. Leave empty to use the summary." }
+      - { label: "YouTube video (optional)", name: video, widget: string, required: false, hint: "Paste a YouTube link and the video appears at the top of the post." }
+      - label: "Related service (optional)"
+        name: related_service
+        widget: select
+        required: false
+        options:
+          - { label: "Home interiors", value: "complete-home-interiors-kozhikode" }
+          - { label: "Modular kitchens & wardrobes", value: "modular-kitchens-wardrobes-kozhikode" }
+          - { label: "Bathrooms", value: "bathroom-interiors-kozhikode" }
+          - { label: "Commercial, healthcare & hospitality", value: "commercial-interiors-kozhikode" }
+          - { label: "Vertical gardens", value: "vertical-gardens-kozhikode" }
+          - { label: "3D design & elevations", value: "3d-design-elevation-kozhikode" }
+          - { label: "Home decor showroom", value: "home-decor-showroom-kozhikode" }
+          - { label: "Interiors for NRIs", value: "nri-home-interiors-kerala" }
+      - { label: "Shorter title for cards (optional)", name: card_title, widget: string, required: false }
+      - { label: "Read time in minutes (optional)", name: read_time, widget: number, value_type: int, required: false }
+      - label: "Post"
+        name: body
+        widget: markdown
+        buttons: ["bold", "italic", "link", "heading-two", "heading-three", "bulleted-list", "numbered-list", "quote"]
+        editor_components: ["image"]
+        hint: "Use 'Heading 2' for section titles. Keep paragraphs short."
