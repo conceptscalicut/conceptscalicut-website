@@ -38,13 +38,11 @@ window.SITE = {
 
   /* Home page film. "chapters" are the labels under the video; "at" is the second each one starts. */
   heroVideo: {
-    src: "https://conceptscalicut-media.netlify.app/transformation.mp4",   // full-quality film, hosted on the media project
-    srcFallback: "media/transformation.mp4",
-    poster: "img/transformation-poster.jpg",
+    src: "media/hero-bedroom.mp4",          // finished bedroom walkthrough (vertical). Computers show it in a framed panel, phones full screen.
+    srcFallback: "media/hero-bedroom.mp4",
+    poster: "img/hero-bedroom-poster.jpg",
     chapters: [
-      { at: 0,   label: "Design",   note: "3D First", label_ml: "ഡിസൈൻ", note_ml: "3D ആദ്യം" },
-      { at: 2.6, label: "Build",    note: "Our Workshop & Site Team", label_ml: "നിർമ്മാണം", note_ml: "സൈറ്റിലും വർക്ക്‌ഷോപ്പിലും ഞങ്ങളുടെ ടീം" },
-      { at: 9.0, label: "Finished", note: "Handed Over", label_ml: "പൂർത്തിയായി", note_ml: "കൈമാറി" }
+      { at: 0, label: "Finished Bedroom", note: "Designed & Built by Concepts", label_ml: "പൂർത്തിയായ ബെഡ്റൂം", note_ml: "Concepts ഡിസൈൻ ചെയ്ത് നിർമ്മിച്ചത്" }
     ]
   },
 

@@ -204,7 +204,7 @@ for lang in ('en', 'ml'):
     head = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', '', head, flags=re.S)
     H = HOME[lang]
     head = head_common(H['title'], H['desc'], H['path'], lang=lang, alternates=ALTS) + \
-        '<link rel="preload" as="image" href="img/transformation-poster.jpg">\n' + \
+        '<link rel="preload" as="image" href="img/hero-bedroom-poster.jpg">\n' + \
         ld(business) + '\n' + ld(website) + '\n' + ld(FAQ_SCHEMA) + '\n' + head
     body = add_dims(body)
     attrs = f' lang="{lang}"' + (' data-page-lang="ml"' if lang == 'ml' else '')

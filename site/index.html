@@ -450,6 +450,16 @@ html[lang="ml"] .chap b{font-size:.98rem}
 @media (max-width:480px){.sub-row{flex-direction:column}}
 .allposts{margin:26px 0 0}
 .prose .vid{aspect-ratio:16/9;margin:18px 0 22px;background:#000}.prose .vid iframe{width:100%;height:100%;border:0;display:block}
+
+/* Hero film: vertical video. Phones: full screen. Computers: sharp framed panel on the right. */
+@media (min-width:900px){
+  .hero{background:radial-gradient(55% 75% at 80% 45%,color-mix(in srgb,var(--gold) 13%,transparent),transparent 70%),#0D0C0A}
+  .hero::after{display:none}
+  .hero video,.hero .poster{inset:auto;top:150px;right:max(32px,calc((100vw - 1200px) / 2 + 24px));width:auto;height:min(calc(100vh - 200px),640px);aspect-ratio:478/850;object-fit:cover;z-index:1;border:1px solid color-mix(in srgb,var(--gold) 55%,transparent);box-shadow:0 30px 80px rgba(0,0,0,.65)}
+  .hero .wrap{z-index:2;pointer-events:none}
+  .hero .wrap a,.hero .wrap button{pointer-events:auto}
+  .hero .wrap>div:first-child{max-width:min(60%,700px)}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -485,8 +495,8 @@ html[lang="ml"] .chap b{font-size:.98rem}
 
 <main id="home">
 <section class="hero" aria-label="From design to finished room">
-  <img class="poster" src="img/transformation-poster.jpg" alt="">
-  <video id="film" muted loop playsinline autoplay preload="auto" aria-label="Film: a room designed in 3D, built by our team, and finished"></video>
+  <img class="poster" src="img/hero-bedroom-poster.jpg" alt="">
+  <video id="film" muted loop playsinline autoplay preload="auto" aria-label="Film: walkthrough of a finished bedroom designed and built by Concepts"></video>
   <div class="wrap">
     <div>
       <h1 class="eyebrow" data-t="t8">Interior Designers &amp; Home Decor Showroom in Kozhikode · Since 2020</h1>
