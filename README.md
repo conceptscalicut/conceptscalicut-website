@@ -21,3 +21,6 @@ Website for Concepts Interiors & Home Decor, Kozhikode. Hosted on Netlify (proje
 pip install -r requirements.txt
 python3 build/build.py      # needs Node.js too (reads site/content.js)
 ```
+
+## Social
+WhatsApp Channel: https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u
