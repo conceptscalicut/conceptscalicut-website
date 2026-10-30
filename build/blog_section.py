@@ -20,7 +20,8 @@ def sub_box(source, heading='Enjoyed This? Get the Next One by Email'):
         '<p class="sub-ok" role="status" hidden>Almost done! Check your inbox and tap the confirmation link to join the list.</p></form></div>'
         '<div class="social"><p class="sub-note">Or follow us</p>'
         '<a class="btn btn-ghost btn-sm" href="https://www.instagram.com/conceptscalicut" target="_blank" rel="noopener">Follow on Instagram</a>'
-        '<a class="btn btn-ghost btn-sm" href="https://www.facebook.com/conceptscalicut" target="_blank" rel="noopener">Follow on Facebook</a></div></div>'
+        '<a class="btn btn-ghost btn-sm" href="https://www.facebook.com/conceptscalicut" target="_blank" rel="noopener">Follow on Facebook</a>'
+        '<a class="btn btn-ghost btn-sm" href="https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u" target="_blank" rel="noopener">Join Our WhatsApp Channel</a></div></div>'
     )
 
 

@@ -85,7 +85,7 @@ business = {
   "hasOfferCatalog":{"@type":"OfferCatalog","name":"Interior and decor products","url":BASE+"/products.html","itemListElement":[{"@type":"OfferCatalog","name":c["name"],"itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":g["name"],"description":g["text"]}} for g in c["groups"]]} for c in site.get("catalog",[])]},
   "knowsLanguage":["en","ml"],
   "aggregateRating":{"@type":"AggregateRating","ratingValue":str(G['rating']),"reviewCount":str(G['count']),"bestRating":"5"},
-  "sameAs":[C['facebook'], C['instagram'], C['googleProfile']],
+  "sameAs":[C['facebook'], C['instagram'], C['whatsappChannel'], C['googleProfile']],
   "contactPoint":[{"@type":"ContactPoint","telephone":"+91-95443-55406","contactType":"customer service","availableLanguage":["English","Malayalam"]}],
   "makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":s['h1'],"url":f"{BASE}/services/{s['slug']}.html"}} for s in SERVICES]
 }
@@ -281,7 +281,7 @@ def footer(prefix):
   <p style="margin-top:16px;max-width:44ch">Concepts Enterprises. Interior design studio and home decor showroom in the heart of Calicut, 500 m from the railway station: St Patrick Church Building, near AKG Flyover, Pushpa Junction, Kozhikode, Kerala 673002.</p></div>
   <div><h4>Services</h4><ul>{svc}</ul></div>
   <div><h4>Explore</h4><ul><li><a href="{prefix}#about">About us</a></li><li><a href="{prefix}products.html">Products</a></li><li><a href="{prefix}#projects">Projects</a></li><li><a href="{prefix}#reviews">Reviews</a></li><li><a href="{prefix}#faq">FAQ</a></li><li><a href="{prefix}journal/">Blog</a></li></ul></div>
-  <div><h4>Reach us</h4><ul><li><a class="wa" href="https://wa.me/{C['whatsapp']}">WhatsApp {esc(C['phoneDisplay'])}</a></li><li><a href="tel:{C['phoneLink']}">Call {esc(C['phoneDisplay'])}</a></li><li><a href="mailto:{C['email']}">{C['email']}</a></li><li><a href="{C['instagram']}" target="_blank" rel="noopener">Instagram @conceptscalicut</a></li><li><a href="{C['facebook']}" target="_blank" rel="noopener">Facebook /conceptscalicut</a></li><li><a href="{C['reviewLink']}" target="_blank" rel="noopener">Review us on Google</a></li></ul></div>
+  <div><h4>Reach us</h4><ul><li><a class="wa" href="https://wa.me/{C['whatsapp']}">WhatsApp {esc(C['phoneDisplay'])}</a></li><li><a href="tel:{C['phoneLink']}">Call {esc(C['phoneDisplay'])}</a></li><li><a href="mailto:{C['email']}">{C['email']}</a></li><li><a href="{C['instagram']}" target="_blank" rel="noopener">Instagram @conceptscalicut</a></li><li><a href="{C['facebook']}" target="_blank" rel="noopener">Facebook /conceptscalicut</a></li><li><a href="{C['reviewLink']}" target="_blank" rel="noopener">Review us on Google</a></li><li><a href="https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u" target="_blank" rel="noopener">WhatsApp Channel</a></li></ul></div>
   <p class="legal">© {datetime.date.today().year} Concepts Enterprises, Kozhikode · <a href="{BASE}/">www.conceptscalicut.com</a></p>
 </div></footer>
 <div class="fabs"><a class="fab-wa wa" data-msg="Hi Concepts, I found you on your website and would like to know more." href="https://wa.me/{C['whatsapp']}" aria-label="Chat with Concepts on WhatsApp"><svg><use href="#i-wa"/></svg></a></div>'''
@@ -438,7 +438,7 @@ open(os.path.join(DIST, 'llms.txt'), 'w', encoding='utf8').write(f'''# Concepts 
 - Email: {C['email']}
 - Website: {BASE}/ (English) and {BASE}/ml.html (Malayalam)
 - Google Business Profile: {C['googleProfile']}
-- Instagram: {C['instagram']} · Facebook: {C['facebook']}
+- Instagram: {C['instagram']} · Facebook: {C['facebook']} · WhatsApp Channel: https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u
 - Languages: English, Malayalam
 - Showroom location: in the heart of Calicut, about 500 m from Kozhikode railway station.
 - Service area: based in Calicut, focused on the Malabar region and central Kerala; projects across Kerala and beyond depending on the project.

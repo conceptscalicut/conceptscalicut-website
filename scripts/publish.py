@@ -132,7 +132,7 @@ else:
 <a href="https://wa.me/919544355406" style="color:#8A6A3A">WhatsApp +91 95443 55406</a> or visit our showroom near Kozhikode railway station.</td></tr>
 <tr><td style="background:#0D0C0A;padding:18px 20px;font:12px/1.6 Arial,sans-serif;color:#A79E90;text-align:center">
 Concepts Interiors &amp; Home Decor · St Patrick Church Building, near AKG Flyover, Pushpa Junction, Kozhikode 673002<br>
-<a href="https://www.instagram.com/conceptscalicut" style="color:#D4BA8E">Instagram</a> · <a href="https://www.facebook.com/conceptscalicut" style="color:#D4BA8E">Facebook</a> · <a href="{BASE}/" style="color:#D4BA8E">conceptscalicut.com</a><br>
+<a href="https://www.instagram.com/conceptscalicut" style="color:#D4BA8E">Instagram</a> · <a href="https://www.facebook.com/conceptscalicut" style="color:#D4BA8E">Facebook</a> · <a href="https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u" style="color:#D4BA8E">WhatsApp Channel</a> · <a href="{BASE}/" style="color:#D4BA8E">conceptscalicut.com</a><br>
 You are receiving this because you subscribed on our website. <a href="{{{{ unsubscribe }}}}" style="color:#D4BA8E">Unsubscribe</a></td></tr>
 </table></td></tr></table></body></html>'''
 

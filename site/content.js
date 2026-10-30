@@ -32,7 +32,8 @@ window.SITE = {
     directions: "https://www.google.com/maps/dir/?api=1&destination=11.242428,75.7844475",
     mapEmbedQuery: "Concepts Interiors & Home Decor, Chalappuram, Kozhikode",
     instagram: "https://www.instagram.com/conceptscalicut",
-    facebook: "https://www.facebook.com/conceptscalicut"
+    facebook: "https://www.facebook.com/conceptscalicut",
+    whatsappChannel: "https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u"   // WhatsApp Channel for updates
   },
 
   /* Home page film. "chapters" are the labels under the video; "at" is the second each one starts. */
