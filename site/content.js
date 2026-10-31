@@ -46,7 +46,7 @@ window.SITE = {
     ]
   },
 
-  workshopVideo: { src: "media/workshop.mp4", poster: "img/workshop-poster.jpg" },
+  workshopVideo: { src: "media/team-wallpaper.mp4", poster: "img/team-wallpaper-poster.jpg" },   // our team installing a wallpaper mural on site
 
   google: { rating: 4.9, count: 104 },
 
