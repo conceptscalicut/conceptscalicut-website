@@ -1,12 +1,19 @@
 
 # ---------- products page ----------
+def tile(pr, g):
+    msg = esc('Hi Concepts, please share options and prices for ' + pr['name'] + '.')
+    pic = (f'<div class="ph"><img src="{pr["img"]}" alt="{esc(pr["name"])} from Concepts, Kozhikode" loading="lazy"></div>' if pr.get('img')
+           else f'<div class="ph ph-empty"><span>{esc(pr["name"])}</span></div>')
+    return (f'<article class="ptile">{pic}<div class="pt-body"><h4>{esc(pr["name"])}</h4><p>{esc(pr.get("text", ""))}</p>'
+            f'<a class="pt-ask wa" data-msg="{msg}" href="https://wa.me/{C["whatsapp"]}"><svg><use href="#i-wa"/></svg>Enquire</a></div></article>')
+
 def group_card(g, cat):
-    style = f' style="object-position:{g["pos"]}"' if g.get('pos') else ''
-    pic = (f'<div class="ph"><img src="{g["img"]}" alt="{esc(g["name"])} at Concepts, Kozhikode" loading="lazy"{style}></div>') if g.get('img') else f'<div class="ph ph-empty"><span>{esc(g["name"])}</span></div>'
-    chips = ''.join(f'<li>{esc(i)}</li>' for i in g['items'])
     msg = esc('Hi Concepts, please share options and prices for ' + g['name'].lower() + '.')
-    return (f'<article class="grp" id="{g["id"]}">{pic}<div class="body"><p class="eyebrow">{esc(cat["name"])}</p><h3>{esc(g["name"])}</h3><p>{esc(g["text"])}</p><ul class="types">{chips}</ul>'
-            f'<a class="btn btn-ghost btn-sm wa" data-msg="{msg}" href="https://wa.me/{C["whatsapp"]}"><svg><use href="#i-wa"/></svg>Ask for options &amp; prices</a></div></article>')
+    tiles = ''.join(tile(pr, g) for pr in g.get('products', []))
+    n = len(g.get('products', []))
+    return (f'<div class="pgroup" id="{g["id"]}"><div class="pg-head"><div><p class="eyebrow">{esc(cat["name"])} · {n} product{"s" if n != 1 else ""}</p><h3>{esc(g["name"])}</h3><p>{esc(g["text"])}</p></div>'
+            f'<a class="btn btn-ghost btn-sm wa" data-msg="{msg}" href="https://wa.me/{C["whatsapp"]}"><svg><use href="#i-wa"/></svg>Ask for options &amp; prices</a></div>'
+            f'<div class="ptiles">{tiles}</div></div>')
 
 fp = site.get('featured')
 feat_html = ''
@@ -26,19 +33,14 @@ for idx, c in enumerate(site['catalog']):
     tone = ' tone' if idx % 2 == 0 else ''
     num = str(idx + 1).zfill(2)
     cards = ''.join(group_card(g, c) for g in c['groups'])
-    if len(c['groups']) % 3:
-        amsg = esc('Hi Concepts, I am looking for ' + c['name'].lower() + ' that are not listed on your website.')
-        cards += (f'<article class="grp grp-ask"><div class="body"><p class="eyebrow">{esc(c["name"])}</p><h3>Looking for something else?</h3>'
-                  '<p>Our showroom carries more than we can list here, and we can source to your design. Tell us what you have in mind.</p>'
-                  f'<a class="btn btn-gold btn-sm wa" data-msg="{amsg}" href="https://wa.me/{C["whatsapp"]}"><svg><use href="#i-wa"/></svg>Ask us on WhatsApp</a></div></article>')
     cats_html += (f'<section class="block{tone}" id="{c["id"]}"><div class="wrap">'
                   f'<div class="head"><div><p class="eyebrow">Collection {num}</p><h2>{esc(c["name"])}</h2><p class="lede">{esc(c["intro"])}</p></div></div>'
-                  f'<nav class="jump" aria-label="{esc(c["name"])} groups">{jump}</nav><div class="grps">{cards}</div>'
-                  '<p class="more-note">And more in the showroom. If you are looking for something specific, ask us on WhatsApp.</p></div></section>')
+                  f'<nav class="jump" aria-label="{esc(c["name"])} groups">{jump}</nav><div class="pgroups">{cards}</div>'
+                  f'<p class="more-note">And more in the showroom. Looking for something specific? <a class="link wa" data-msg="Hi Concepts, I am looking for something that is not listed on your website." href="https://wa.me/{C["whatsapp"]}">Ask us on WhatsApp</a>.</p></div></section>')
 
 prod_body = ('<section class="phero"><div class="wrap">' + crumbs([("Home", "./"), ("Products", None)]) +
     '<div class="grid"><div><p class="eyebrow">Products · Showroom 500 m from Kozhikode railway station</p><h1>Interior and decor products</h1>'
-    '<p class="lede">The materials and finishing pieces we use in our own projects, in two collections. See them in person at our showroom in the heart of Calicut, or ask on WhatsApp for photos, sizes and prices.</p>'
+    '<p class="lede">The materials and finishing pieces we use in our own projects, in three collections. See them in person at our showroom in the heart of Calicut, or ask on WhatsApp for photos, sizes and prices.</p>'
     f'<nav class="ctabs" aria-label="Collections">{tabs}</nav></div><img src="{site["catalog"][0]["cover"]}" alt="Interior products by Concepts" fetchpriority="high"></div></div></section>'
     + feat_html + cats_html +
     '<section class="block"><div class="wrap cols"><div class="prose"><h2>Visit the showroom</h2><p>In the heart of Calicut, just 500 m from Kozhikode railway station: St Patrick Church Building, near AKG Flyover, Pushpa Junction, Kozhikode 673002. Open Monday to Saturday, 9:30 am to 7:30 pm. Message us before you visit and we will keep samples ready.</p>'

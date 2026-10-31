@@ -129,66 +129,548 @@ window.SITE = {
 
   /* PRODUCT CATALOGUE. Two collections, each made of groups. Add a group by copying one { ... } block.
      img is optional: groups without a photo show a styled title card until you add one. */
+  /* PRODUCT CATALOGUE (from our WhatsApp catalogue). Collections > groups > products.
+     Each product: name, text, img (optional). Add a product by copying one { ... } line inside "products". */
   catalog: [
-    { id: "interior", name: "Interior Products", name_ml: "ഇന്റീരിയർ ഉൽപ്പന്നങ്ങൾ",
-      intro: "Materials and fittings that shape a room: walls, windows, floors and mirrors, supplied and installed by our team.",
-      intro_ml: "മുറിയുടെ രൂപം നിർണ്ണയിക്കുന്ന മെറ്റീരിയലുകളും ഫിറ്റിംഗുകളും: ചുമരുകൾ, ജനലുകൾ, തറ, മിററുകൾ. ഞങ്ങളുടെ ടീം സപ്ലൈ ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
-      cover: "img/tv-unit.jpg",
-      groups: [
-        { id: "wall-coverings", name: "Wall Coverings", name_ml: "വാൾ കവറിംഗ്", img: "img/wallpaper-tropical.jpg", pos: "center 30%",
-          text: "Catalogue and customised wallpapers, wall textures and wall panels, installed by our team.",
-          text_ml: "കാറ്റലോഗ്, കസ്റ്റമൈസ്ഡ് വാൾപേപ്പറുകൾ, വാൾ ടെക്സ്ചറുകൾ, വാൾ പാനലുകൾ; ഞങ്ങളുടെ ടീം ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
-          items: ["Wallpapers", "Customised Wallpapers", "Wall Textures", "Wall Panels"],
-          items_ml: ["വാൾപേപ്പർ", "കസ്റ്റമൈസ്ഡ് വാൾപേപ്പർ", "വാൾ ടെക്സ്ചർ", "വാൾ പാനൽ"] },
-        { id: "louvers", name: "Louvers", name_ml: "ലൂവറുകൾ", img: "img/courtyard-lounge.jpg",
-          text: "Louvers that add rhythm and depth to feature walls, ceilings and partitions.",
-          text_ml: "ഫീച്ചർ വാളുകൾക്കും സീലിംഗിനും പാർട്ടീഷനുകൾക്കും ആഴവും ഭംഗിയും നൽകുന്ന ലൂവറുകൾ.",
-          items: ["Wall Louvers", "Ceiling Louvers", "Partitions & Screens"],
-          items_ml: ["വാൾ ലൂവർ", "സീലിംഗ് ലൂവർ", "പാർട്ടീഷനും സ്ക്രീനും"] },
-        { id: "curtains", name: "Curtains & Blinds", name_ml: "കർട്ടനും ബ്ലൈൻഡും", img: "img/curtain-poster.jpg",
-          text: "Made-to-measure curtains, sheers and blinds, stitched and fitted by our team.",
-          text_ml: "അളവിനനുസരിച്ച് തയ്ച്ച് ഫിറ്റ് ചെയ്യുന്ന കർട്ടനുകൾ, ഷിയറുകൾ, ബ്ലൈൻഡുകൾ.",
-          items: ["Curtains", "Sheers", "Blinds"], items_ml: ["കർട്ടൻ", "ഷിയർ", "ബ്ലൈൻഡ്"] },
-        { id: "flooring", name: "Flooring", name_ml: "ഫ്ലോറിംഗ്", img: "img/lvt-poster.jpg", pos: "center 92%",
-          text: "Wood-look LVT planks that can usually go over level existing tiles. Ask us about other flooring options.",
-          text_ml: "നിരപ്പായ പഴയ ടൈലുകൾക്ക് മുകളിൽ ഇടാവുന്ന, തടിയുടെ ഭംഗിയുള്ള LVT പ്ലാങ്കുകൾ. മറ്റ് ഫ്ലോറിംഗ് ഓപ്ഷനുകളെക്കുറിച്ചും ചോദിക്കാം.",
-          items: ["LVT Flooring", "More on Request"], items_ml: ["LVT ഫ്ലോറിംഗ്", "മറ്റുള്ളവ ആവശ്യാനുസരണം"] },
-        { id: "mirrors", name: "Mirrors", name_ml: "മിററുകൾ", img: "img/mirror-oval.jpg",
-          text: "From everyday plain mirrors to statement LED, decor, framed and pedestal mirrors.",
-          text_ml: "സാധാരണ മിററുകൾ മുതൽ LED, ഡെക്കർ, ഫ്രെയിം, പെഡസ്റ്റൽ മിററുകൾ വരെ.",
-          items: ["Plain Mirrors", "LED Mirrors", "Decor Mirrors", "Frame Mirrors", "Pedestal Mirrors"],
-          items_ml: ["പ്ലെയിൻ മിറർ", "LED മിറർ", "ഡെക്കർ മിറർ", "ഫ്രെയിം മിറർ", "പെഡസ്റ്റൽ മിറർ"] }
-      ] },
-    { id: "decor", name: "Decor Products", name_ml: "ഡെക്കർ ഉൽപ്പന്നങ്ങൾ",
-      intro: "Finishing pieces that give a home its character: curios, wall art, plants, pots and frames.",
-      intro_ml: "വീടിന് വ്യക്തിത്വം നൽകുന്ന ഫിനിഷിംഗ് പീസുകൾ: ക്യൂരിയോകൾ, വാൾ ആർട്ട്, ചെടികൾ, ചട്ടികൾ, ഫ്രെയിമുകൾ.",
-      cover: "img/vases-black.jpg",
-      groups: [
-        { id: "curios", name: "Curios", name_ml: "ക്യൂരിയോകൾ", img: "img/vases-black.jpg",
-          text: "Textured ceramic vases, table pieces and showpieces in black, white and gold.",
-          text_ml: "കറുപ്പ്, വെളുപ്പ്, ഗോൾഡ് നിറങ്ങളിൽ ടെക്സ്ചർഡ് സെറാമിക് വാസുകൾ, ടേബിൾ പീസുകൾ, ഷോപീസുകൾ.",
-          items: ["Vases", "Table Decor", "Showpieces"], items_ml: ["വാസ്", "ടേബിൾ ഡെക്കർ", "ഷോപീസ്"] },
-        { id: "wall-decor", name: "Wall Decor", name_ml: "വാൾ ഡെക്കർ", img: "img/calligraphy-black.jpg",
-          text: "Metal wall art and accent pieces that become the focus of a room.",
-          text_ml: "മുറിയുടെ ശ്രദ്ധാകേന്ദ്രമാകുന്ന മെറ്റൽ വാൾ ആർട്ടും ആക്സന്റ് പീസുകളും.",
-          items: ["Wall Art", "Accent Pieces"], items_ml: ["വാൾ ആർട്ട്", "ആക്സന്റ് പീസുകൾ"] },
-        { id: "calligraphy", name: "Calligraphy", name_ml: "കാലിഗ്രഫി", img: "img/calligraphy-gold.jpg",
-          text: "Arabic calligraphy wall art in gold and black, made to the size of your wall.",
-          text_ml: "ചുമരിന്റെ വലിപ്പത്തിനനുസരിച്ച്, ഗോൾഡിലും കറുപ്പിലും അറബിക് കാലിഗ്രഫി വാൾ ആർട്ട്.",
-          items: ["Gold Finish", "Black Finish", "Custom Sizes"], items_ml: ["ഗോൾഡ് ഫിനിഷ്", "ബ്ലാക്ക് ഫിനിഷ്", "കസ്റ്റം സൈസ്"] },
-        { id: "plants", name: "Plants & Green Walls", name_ml: "ചെടികളും ഗ്രീൻ വാളുകളും", img: "img/greenwall-outdoor.jpg",
-          text: "Artificial plants and vertical gardens that stay green through monsoon and summer.",
-          text_ml: "മഴയിലും വേനലിലും പച്ചപ്പ് നിലനിൽക്കുന്ന ആർട്ടിഫിഷ്യൽ ചെടികളും വെർട്ടിക്കൽ ഗാർഡനുകളും.",
-          items: ["Artificial Plants", "Vertical Gardens"], items_ml: ["ആർട്ടിഫിഷ്യൽ ചെടികൾ", "വെർട്ടിക്കൽ ഗാർഡൻ"] },
-        { id: "pots", name: "Pots & Planters", name_ml: "ചട്ടികളും പ്ലാന്ററുകളും", img: "img/vase-white.jpg",
-          text: "Planters and pots in textured and geometric finishes for indoor greenery.",
-          text_ml: "ഇൻഡോർ ചെടികൾക്കായി ടെക്സ്ചർഡ്, ജ്യോമെട്രിക് ഫിനിഷുകളിലുള്ള ചട്ടികളും പ്ലാന്ററുകളും.",
-          items: ["Planters", "Pots"], items_ml: ["പ്ലാന്റർ", "ചട്ടി"] },
-        { id: "frames", name: "Picture Frames", name_ml: "ഫോട്ടോ ഫ്രെയിമുകൾ", img: "img/frames.jpg",
-          text: "Gallery-wall frame sets for your own photos, including our Memories collection.",
-          text_ml: "നിങ്ങളുടെ ഫോട്ടോകൾക്കായി ഗാലറി-വാൾ ഫ്രെയിം സെറ്റുകൾ; ഞങ്ങളുടെ മെമ്മറീസ് കളക്ഷൻ ഉൾപ്പെടെ.",
-          items: ["Gallery Frame Sets", "Memories Collection", "Photo Frames"], items_ml: ["ഗാലറി ഫ്രെയിം സെറ്റ്", "മെമ്മറീസ് കളക്ഷൻ", "ഫോട്ടോ ഫ്രെയിം"] }
-      ] }
+    {
+      "id": "interior",
+      "name": "Interior Products",
+      "name_ml": "ഇന്റീരിയർ ഉൽപ്പന്നങ്ങൾ",
+      "intro": "Materials and fittings that shape a room: walls, ceilings, windows, floors, mirrors, lighting and furniture, supplied and installed by our team.",
+      "intro_ml": "മുറിയുടെ രൂപം നിർണ്ണയിക്കുന്ന മെറ്റീരിയലുകളും ഫിറ്റിംഗുകളും: ചുമരുകൾ, ജനലുകൾ, തറ, മിററുകൾ. ഞങ്ങളുടെ ടീം സപ്ലൈ ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
+      "cover": "img/tv-unit.jpg",
+      "groups": [
+        {
+          "id": "wall-coverings",
+          "name": "Wall Coverings",
+          "name_ml": "വാൾ കവറിംഗ്",
+          "img": "img/wallpaper-tropical.jpg",
+          "pos": "center 30%",
+          "text": "Catalogue and customised wallpapers, wall textures and wall panels, installed by our team.",
+          "text_ml": "കാറ്റലോഗ്, കസ്റ്റമൈസ്ഡ് വാൾപേപ്പറുകൾ, വാൾ ടെക്സ്ചറുകൾ, വാൾ പാനലുകൾ; ഞങ്ങളുടെ ടീം ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
+          "items": [
+            "Wallpapers",
+            "Customised Wallpapers",
+            "Tropical Wallpapers",
+            "Liquid Wall Coverings",
+            "3D PVC Wall Panels",
+            "Texture Wall Coating",
+            "Wall Mouldings"
+          ],
+          "products": [
+            {
+              "name": "Wallpapers",
+              "text": "Non-woven, PVC, vinyl and 3D wallpapers from leading brands, supplied and installed by our technicians.",
+              "img": "img/products/wallpapers.jpg"
+            },
+            {
+              "name": "Customised Wallpapers",
+              "text": "Any design printed to your wall size, with seamless installation by our team.",
+              "img": "img/products/customised-wallpapers.jpg"
+            },
+            {
+              "name": "Tropical Wallpapers",
+              "text": "Greenery and landscape patterns that bring a calm, natural feel to bedrooms and living rooms.",
+              "img": "img/products/tropical-wallpapers.jpg"
+            },
+            {
+              "name": "Liquid Wall Coverings",
+              "text": "Textured, customisable wall coverings in a wide range of colours.",
+              "img": "img/products/liquid-wall-coverings.jpg"
+            },
+            {
+              "name": "3D PVC Wall Panels",
+              "text": "Waterproof 50 × 50 cm uPVC panels in matt and metallic finishes. Quick to install.",
+              "img": "img/products/3d-pvc-wall-panels.jpg"
+            },
+            {
+              "name": "Texture Wall Coating",
+              "text": "Cement-texture finishes for interior and exterior walls.",
+              "img": "img/products/texture-wall-coating.jpg"
+            },
+            {
+              "name": "Wall Mouldings",
+              "text": "Paintable French mouldings in white and gold profiles for classic panelled walls.",
+              "img": "img/products/wall-mouldings.jpg"
+            }
+          ]
+        },
+        {
+          "id": "louvers",
+          "name": "Louvers & Wall Panels",
+          "name_ml": "ലൂവറും വാൾ പാനലും",
+          "img": "img/courtyard-lounge.jpg",
+          "text": "WPC louvers and wall panels in wood, stone and metallic finishes for feature walls, ceilings and partitions.",
+          "text_ml": "ഫീച്ചർ വാളുകൾക്കും സീലിംഗിനും പാർട്ടീഷനുകൾക്കും ആഴവും ഭംഗിയും നൽകുന്ന ലൂവറുകൾ.",
+          "items": [
+            "Louvers & WPC Wall Panels"
+          ],
+          "products": [
+            {
+              "name": "Louvers & WPC Wall Panels",
+              "text": "WPC panels 9.5 ft long and 6 inches wide, in wood, stone and metallic finishes.",
+              "img": "img/products/louvers-wpc-wall-panels.jpg"
+            }
+          ]
+        },
+        {
+          "id": "ceilings",
+          "name": "False Ceilings",
+          "name_ml": "ഫാൾസ് സീലിംഗ്",
+          "img": "img/products/false-ceiling-panels.jpg",
+          "text": "Ceiling panels, wood-pattern boards and gypsum false ceilings with integrated lighting.",
+          "text_ml": "സീലിംഗ് പാനലുകൾ, വുഡ്-പാറ്റേൺ ബോർഡുകൾ, ലൈറ്റിംഗോടുകൂടിയ ജിപ്സം ഫാൾസ് സീലിംഗ്.",
+          "products": [
+            {
+              "name": "False Ceiling Panels",
+              "text": "Water-resistant ceiling panels. Quick to install and easy to maintain.",
+              "img": "img/products/false-ceiling-panels.jpg"
+            },
+            {
+              "name": "Wood-Pattern Ceiling Boards",
+              "text": "Solid ceiling boards with a natural wood look, for a warm finish overhead.",
+              "img": "img/products/wood-pattern-ceiling-boards.jpg"
+            },
+            {
+              "name": "Gypsum False Ceilings",
+              "text": "Designed and built by our team, with cove lighting and profiles to suit the room.",
+              "img": "img/products/gypsum-false-ceilings.jpg"
+            }
+          ],
+          "items": [
+            "False Ceiling Panels",
+            "Wood-Pattern Ceiling Boards",
+            "Gypsum False Ceilings"
+          ]
+        },
+        {
+          "id": "curtains",
+          "name": "Curtains & Blinds",
+          "name_ml": "കർട്ടനും ബ്ലൈൻഡും",
+          "img": "img/curtain-poster.jpg",
+          "text": "Made-to-measure curtains and blinds, stitched and fitted by our team, plus outdoor blinds and insect nets.",
+          "text_ml": "അളവിനനുസരിച്ച് തയ്ച്ച് ഫിറ്റ് ചെയ്യുന്ന കർട്ടനുകൾ, ഷിയറുകൾ, ബ്ലൈൻഡുകൾ.",
+          "items": [
+            "Fabric Curtains",
+            "Window Blinds",
+            "Roman Blinds",
+            "Zebra Blinds",
+            "PVC Outdoor Blinds",
+            "Mosquito & Safety Nets"
+          ],
+          "products": [
+            {
+              "name": "Fabric Curtains",
+              "text": "M-track, eyelet and ripple curtains in a wide fabric range, stitched and installed to measure.",
+              "img": "img/products/fabric-curtains.jpg"
+            },
+            {
+              "name": "Window Blinds",
+              "text": "Zebra, roman, roller, venetian and vertical blinds for homes and offices.",
+              "img": "img/products/window-blinds.jpg"
+            },
+            {
+              "name": "Roman Blinds",
+              "text": "Soft fabric blinds that fold neatly when raised.",
+              "img": "img/products/roman-blinds.jpg"
+            },
+            {
+              "name": "Zebra Blinds",
+              "text": "Economical, stylish dual-layer blinds in many colours. Our most popular choice.",
+              "img": "img/products/zebra-blinds.jpg"
+            },
+            {
+              "name": "PVC Outdoor Blinds",
+              "text": "Weather-resistant blinds for balconies, sit-outs and verandas.",
+              "img": "img/products/pvc-outdoor-blinds.jpg"
+            },
+            {
+              "name": "Mosquito & Safety Nets",
+              "text": "Insect nets for doors and windows, including sliding-door types, plus safety nets.",
+              "img": "img/products/mosquito-safety-nets.jpg"
+            }
+          ]
+        },
+        {
+          "id": "flooring",
+          "name": "Flooring",
+          "name_ml": "ഫ്ലോറിംഗ്",
+          "img": "img/lvt-poster.jpg",
+          "pos": "center 92%",
+          "text": "Premium vinyl flooring tiles and carpet flooring for homes, offices and hotels.",
+          "text_ml": "നിരപ്പായ പഴയ ടൈലുകൾക്ക് മുകളിൽ ഇടാവുന്ന, തടിയുടെ ഭംഗിയുള്ള LVT പ്ലാങ്കുകൾ. മറ്റ് ഫ്ലോറിംഗ് ഓപ്ഷനുകളെക്കുറിച്ചും ചോദിക്കാം.",
+          "items": [
+            "Premium Vinyl Flooring",
+            "Carpet Flooring"
+          ],
+          "products": [
+            {
+              "name": "Premium Vinyl Flooring",
+              "text": "Vinyl flooring tiles in 1.5 mm and 2.0 mm thickness with natural wood looks.",
+              "img": "img/products/premium-vinyl-flooring.jpg"
+            },
+            {
+              "name": "Carpet Flooring",
+              "text": "Carpet tiles and rolls for offices, hotels and bedrooms.",
+              "img": "img/products/carpet-flooring.jpg"
+            }
+          ]
+        },
+        {
+          "id": "mirrors",
+          "name": "Mirrors",
+          "name_ml": "മിററുകൾ",
+          "img": "img/mirror-oval.jpg",
+          "text": "From everyday plain mirrors to statement LED, decor, framed and pedestal mirrors.",
+          "text_ml": "സാധാരണ മിററുകൾ മുതൽ LED, ഡെക്കർ, ഫ്രെയിം, പെഡസ്റ്റൽ മിററുകൾ വരെ.",
+          "items": [
+            "LED Mirrors",
+            "Customised Frame Mirrors",
+            "Wooden Frame Mirrors",
+            "Pedestal Mirrors",
+            "Plain Mirrors",
+            "Asymmetric Mirrors",
+            "Mirror Decor"
+          ],
+          "products": [
+            {
+              "name": "LED Mirrors",
+              "text": "Backlit mirrors made to your size and shape, with touch switch and anti-fog options.",
+              "img": "img/products/led-mirrors.jpg"
+            },
+            {
+              "name": "Customised Frame Mirrors",
+              "text": "Statement wall-mounted mirrors with metal or wood frames, made to order.",
+              "img": "img/products/customised-frame-mirrors.jpg"
+            },
+            {
+              "name": "Wooden Frame Mirrors",
+              "text": "Mirrors framed in natural wood for a warm, organic look.",
+              "img": "img/products/wooden-frame-mirrors.jpg"
+            },
+            {
+              "name": "Pedestal Mirrors",
+              "text": "Free-standing full-length mirrors in the size of your choice.",
+              "img": "img/products/pedestal-mirrors.jpg"
+            },
+            {
+              "name": "Plain Mirrors",
+              "text": "Bevelled and polished mirrors with hook or stud fixing.",
+              "img": "img/products/plain-mirrors.jpg"
+            },
+            {
+              "name": "Asymmetric Mirrors",
+              "text": "Mirrors in unconventional, free-form shapes that add character to a wall.",
+              "img": "img/products/asymmetric-mirrors.jpg"
+            },
+            {
+              "name": "Mirror Decor",
+              "text": "Self-adhesive decorative mirror shapes, customisable to your design."
+            }
+          ]
+        },
+        {
+          "id": "lighting",
+          "name": "Lighting",
+          "name_ml": "ലൈറ്റിംഗ്",
+          "img": "img/products/designer-lighting.jpg",
+          "text": "Indoor and outdoor LED lights, designer lighting, pedestal lamps and table lamps.",
+          "text_ml": "ഇൻഡോർ, ഔട്ട്ഡോർ LED ലൈറ്റുകൾ, ഡിസൈനർ ലൈറ്റിംഗ്, പെഡസ്റ്റൽ ലാമ്പുകൾ, ടേബിൾ ലാമ്പുകൾ.",
+          "products": [
+            {
+              "name": "LED Lights",
+              "text": "Wall lights, pendants and hanging sets for indoor, outdoor and dining spaces.",
+              "img": "img/products/led-lights.jpg"
+            },
+            {
+              "name": "Designer Lighting",
+              "text": "Custom-designed lighting for corridors, ceilings and feature walls.",
+              "img": "img/products/designer-lighting.jpg"
+            },
+            {
+              "name": "Pedestal Lamps",
+              "text": "Floor lamps with turned wooden stands and fabric shades.",
+              "img": "img/products/pedestal-lamps.jpg"
+            },
+            {
+              "name": "Table Lamps in Natural Wood",
+              "text": "Table and floor lamps with natural driftwood bases and fabric shades.",
+              "img": "img/products/table-lamps-in-natural-wood.jpg"
+            }
+          ],
+          "items": [
+            "LED Lights",
+            "Designer Lighting",
+            "Pedestal Lamps",
+            "Table Lamps in Natural Wood"
+          ]
+        },
+        {
+          "id": "furniture",
+          "name": "Customised Furniture",
+          "name_ml": "കസ്റ്റമൈസ്ഡ് ഫർണിച്ചർ",
+          "img": "img/products/sofas-chairs.jpg",
+          "text": "Sofas, dressing units and bedroom furniture made to your design.",
+          "text_ml": "നിങ്ങളുടെ ഡിസൈനിൽ നിർമ്മിക്കുന്ന സോഫകൾ, ഡ്രസ്സിംഗ് യൂണിറ്റുകൾ, ബെഡ്റൂം ഫർണിച്ചർ.",
+          "products": [
+            {
+              "name": "Sofas & Chairs",
+              "text": "Quality sofas and chairs made to order in your design and upholstery.",
+              "img": "img/products/sofas-chairs.jpg"
+            },
+            {
+              "name": "Dressing Units",
+              "text": "Custom dressing units with mirrors, lighting and storage.",
+              "img": "img/products/dressing-units.jpg"
+            },
+            {
+              "name": "Bedroom Furniture",
+              "text": "Beds, wardrobes and storage built to suit each client.",
+              "img": "img/products/bedroom-furniture.jpg"
+            }
+          ],
+          "items": [
+            "Sofas & Chairs",
+            "Dressing Units",
+            "Bedroom Furniture"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decor",
+      "name": "Decor Products",
+      "name_ml": "ഡെക്കർ ഉൽപ്പന്നങ്ങൾ",
+      "intro": "Finishing pieces that give a home its character: curios, wall art, clocks, calligraphy, plants, pots and frames.",
+      "intro_ml": "വീടിന് വ്യക്തിത്വം നൽകുന്ന ഫിനിഷിംഗ് പീസുകൾ: ക്യൂരിയോകൾ, വാൾ ആർട്ട്, ചെടികൾ, ചട്ടികൾ, ഫ്രെയിമുകൾ.",
+      "cover": "img/vases-black.jpg",
+      "groups": [
+        {
+          "id": "curios",
+          "name": "Curios",
+          "name_ml": "ക്യൂരിയോകൾ",
+          "img": "img/vases-black.jpg",
+          "text": "Textured ceramic vases, table pieces and showpieces in black, white and gold.",
+          "text_ml": "കറുപ്പ്, വെളുപ്പ്, ഗോൾഡ് നിറങ്ങളിൽ ടെക്സ്ചർഡ് സെറാമിക് വാസുകൾ, ടേബിൾ പീസുകൾ, ഷോപീസുകൾ.",
+          "items": [
+            "Curios & Vases",
+            "Flowers & Vases"
+          ],
+          "products": [
+            {
+              "name": "Curios & Vases",
+              "text": "Vases and curios for shelves, consoles and coffee tables, including our stone-finish vases.",
+              "img": "img/products/curios-vases.jpg"
+            },
+            {
+              "name": "Flowers & Vases",
+              "text": "Tall decor vases with artificial flower arrangements.",
+              "img": "img/products/flowers-vases.jpg"
+            }
+          ]
+        },
+        {
+          "id": "wall-decor",
+          "name": "Wall Decor",
+          "name_ml": "വാൾ ഡെക്കർ",
+          "img": "img/calligraphy-black.jpg",
+          "text": "Metal wall art and accent pieces that become the focus of a room.",
+          "text_ml": "മുറിയുടെ ശ്രദ്ധാകേന്ദ്രമാകുന്ന മെറ്റൽ വാൾ ആർട്ടും ആക്സന്റ് പീസുകളും.",
+          "items": [
+            "Metal Wall Art"
+          ],
+          "products": [
+            {
+              "name": "Metal Wall Art",
+              "text": "Metal wall decorations with mirror accents. Customisation available.",
+              "img": "img/products/metal-wall-art.jpg"
+            }
+          ]
+        },
+        {
+          "id": "clocks",
+          "name": "Clocks",
+          "name_ml": "ക്ലോക്കുകൾ",
+          "img": "img/products/vintage-clocks.jpg",
+          "text": "Wooden, metal and vintage wall clocks.",
+          "text_ml": "മരം, മെറ്റൽ, വിന്റേജ് വാൾ ക്ലോക്കുകൾ.",
+          "products": [
+            {
+              "name": "Wooden Wall Clocks",
+              "text": "Natural wood-slice wall clocks, each piece unique.",
+              "img": "img/products/wooden-wall-clocks.jpg"
+            },
+            {
+              "name": "Metal Wall Clocks",
+              "text": "Iron clocks in powder-coated finishes, in sizes from 12 inches upwards.",
+              "img": "img/products/metal-wall-clocks.jpg"
+            },
+            {
+              "name": "Vintage Clocks",
+              "text": "Two-sided station-style clocks with a nostalgic feel.",
+              "img": "img/products/vintage-clocks.jpg"
+            }
+          ],
+          "items": [
+            "Wooden Wall Clocks",
+            "Metal Wall Clocks",
+            "Vintage Clocks"
+          ]
+        },
+        {
+          "id": "calligraphy",
+          "name": "Calligraphy",
+          "name_ml": "കാലിഗ്രഫി",
+          "img": "img/calligraphy-gold.jpg",
+          "text": "Arabic calligraphy wall art in gold and black, made to the size of your wall.",
+          "text_ml": "ചുമരിന്റെ വലിപ്പത്തിനനുസരിച്ച്, ഗോൾഡിലും കറുപ്പിലും അറബിക് കാലിഗ്രഫി വാൾ ആർട്ട്.",
+          "items": [
+            "Wall Art Calligraphy",
+            "Calligraphy Frames"
+          ],
+          "products": [
+            {
+              "name": "Wall Art Calligraphy",
+              "text": "Calligraphy wall hangings in metal or wood, customised in design and finish.",
+              "img": "img/products/wall-art-calligraphy.jpg"
+            },
+            {
+              "name": "Calligraphy Frames",
+              "text": "Hand-made and printed calligraphy art, framed.",
+              "img": "img/products/calligraphy-frames.jpg"
+            }
+          ]
+        },
+        {
+          "id": "plants",
+          "name": "Plants & Green Walls",
+          "name_ml": "ചെടികളും ഗ്രീൻ വാളുകളും",
+          "img": "img/greenwall-outdoor.jpg",
+          "text": "Artificial plants and vertical gardens that stay green through monsoon and summer.",
+          "text_ml": "മഴയിലും വേനലിലും പച്ചപ്പ് നിലനിൽക്കുന്ന ആർട്ടിഫിഷ്യൽ ചെടികളും വെർട്ടിക്കൽ ഗാർഡനുകളും.",
+          "items": [
+            "Artificial Indoor Plants",
+            "Artificial Green Walls",
+            "Bonsai & Miniature Plants",
+            "Artificial Trees"
+          ],
+          "products": [
+            {
+              "name": "Artificial Indoor Plants",
+              "text": "Real-look plants, creepers and hanging plants. Zero maintenance and long life.",
+              "img": "img/products/artificial-indoor-plants.jpg"
+            },
+            {
+              "name": "Artificial Green Walls",
+              "text": "Leafy, floral and moss panels and mats for vertical gardens.",
+              "img": "img/products/artificial-green-walls.jpg"
+            },
+            {
+              "name": "Bonsai & Miniature Plants",
+              "text": "Original-looking miniature plants for shelves and tables.",
+              "img": "img/products/bonsai-miniature-plants.jpg"
+            },
+            {
+              "name": "Artificial Trees",
+              "text": "Tall real-look plants and trees in various sizes.",
+              "img": "img/products/artificial-trees.jpg"
+            }
+          ]
+        },
+        {
+          "id": "pots",
+          "name": "Pots & Planters",
+          "name_ml": "ചട്ടികളും പ്ലാന്ററുകളും",
+          "img": "img/vase-white.jpg",
+          "text": "Planters and pots in textured and geometric finishes for indoor greenery.",
+          "text_ml": "ഇൻഡോർ ചെടികൾക്കായി ടെക്സ്ചർഡ്, ജ്യോമെട്രിക് ഫിനിഷുകളിലുള്ള ചട്ടികളും പ്ലാന്ററുകളും.",
+          "items": [
+            "Fibre Pots",
+            "Mini Pots & Planter Curios",
+            "Ceramic Planter Pots"
+          ],
+          "products": [
+            {
+              "name": "Fibre Pots",
+              "text": "Stylish fibre pots in many sizes and patterns.",
+              "img": "img/products/fibre-pots.jpg"
+            },
+            {
+              "name": "Mini Pots & Planter Curios",
+              "text": "Small metal and ceramic pots to use as planters or curios.",
+              "img": "img/products/mini-pots-planter-curios.jpg"
+            },
+            {
+              "name": "Ceramic Planter Pots",
+              "text": "Ceramic pots in a range of sizes, shapes and patterns.",
+              "img": "img/products/ceramic-planter-pots.jpg"
+            }
+          ]
+        },
+        {
+          "id": "frames",
+          "name": "Picture Frames",
+          "name_ml": "ഫോട്ടോ ഫ്രെയിമുകൾ",
+          "img": "img/frames.jpg",
+          "text": "Framed art prints, photo frames and gallery-wall sets.",
+          "text_ml": "നിങ്ങളുടെ ഫോട്ടോകൾക്കായി ഗാലറി-വാൾ ഫ്രെയിം സെറ്റുകൾ; ഞങ്ങളുടെ മെമ്മറീസ് കളക്ഷൻ ഉൾപ്പെടെ.",
+          "items": [
+            "Picture Frames & Wall Art"
+          ],
+          "products": [
+            {
+              "name": "Picture Frames & Wall Art",
+              "text": "Framed art prints and photo frames for gallery walls.",
+              "img": "img/products/picture-frames-wall-art.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "appliances",
+      "name": "Home Appliances",
+      "name_ml": "ഹോം അപ്ലയൻസുകൾ",
+      "intro": "Water heaters and water purifiers from trusted brands, supplied and installed.",
+      "intro_ml": "വിശ്വസനീയ ബ്രാൻഡുകളുടെ വാട്ടർ ഹീറ്ററുകളും പ്യൂരിഫയറുകളും, സപ്ലൈയും ഇൻസ്റ്റലേഷനും.",
+      "cover": "img/products/viron-water-purifiers.jpg",
+      "groups": [
+        {
+          "id": "water",
+          "name": "Water Heaters & Purifiers",
+          "name_ml": "വാട്ടർ ഹീറ്ററും പ്യൂരിഫയറും",
+          "img": "img/products/electric-water-heaters.jpg",
+          "text": "Electric and gas water heaters, and water purifiers as authorised dealers.",
+          "text_ml": "ഇലക്ട്രിക്, ഗ്യാസ് വാട്ടർ ഹീറ്ററുകൾ; അംഗീകൃത ഡീലർമാരായി വാട്ടർ പ്യൂരിഫയറുകൾ.",
+          "products": [
+            {
+              "name": "Electric Water Heaters",
+              "text": "3 L to 25 L, horizontal and vertical, from AO Smith, Crompton, Venus, Havells and more.",
+              "img": "img/products/electric-water-heaters.jpg"
+            },
+            {
+              "name": "Gas Water Heaters",
+              "text": "Instant hot water without electricity, for homes, resorts, restaurants and hotels."
+            },
+            {
+              "name": "VIRON Water Purifiers",
+              "text": "Authorised dealers. Wall-mounted RO and UV purifiers in various capacities.",
+              "img": "img/products/viron-water-purifiers.jpg"
+            },
+            {
+              "name": "AO Smith Water Purifiers",
+              "text": "Water purifiers for home and office needs."
+            }
+          ],
+          "items": [
+            "Electric Water Heaters",
+            "Gas Water Heaters",
+            "VIRON Water Purifiers",
+            "AO Smith Water Purifiers"
+          ]
+        }
+      ]
+    }
   ],
 
   /* Google Analytics 4. Paste your Measurement ID (looks like G-XXXXXXXXXX) between the quotes.
