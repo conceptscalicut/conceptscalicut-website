@@ -76,6 +76,10 @@ if EVENT in ('schedule', 'workflow_dispatch'):
         git('commit', '--allow-empty', '-m', f'Publish {TODAY} [publish]')
         git('push')
         print('Pushed a [publish] commit: Netlify will deploy the site.')
+        # tell Bing & co. about the changes once the deploy is live (runs in the background of this job)
+        head = git('rev-parse', 'HEAD').stdout.strip()
+        _ix = subprocess.Popen([sys.executable, 'scripts/indexnow.py', last or '', head] + [p['slug'] for p in new])
+        __import__('atexit').register(_ix.wait)  # finish the submit even if the script exits early
     else:
         print('Nothing new to publish this week.')
     to_email = new

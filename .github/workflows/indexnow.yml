@@ -1,0 +1,16 @@
+name: Notify search engines (IndexNow)
+
+on:
+  push:
+    branches: [main]   # pushes that Netlify deploys (website updates, "Publish immediately" posts)
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Submit changed pages after the deploy goes live
+        run: python scripts/indexnow.py "${{ github.event.before }}" "${{ github.sha }}"

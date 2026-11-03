@@ -392,6 +392,9 @@ open(os.path.join(DIST, 'feed.xml'), 'w', encoding='utf8').write(f"""<?xml versi
 
 open(os.path.join(DIST, 'sitemap.xml'), 'w', encoding='utf8').write('\n'.join(sm) + '\n')
 
+# IndexNow key file and build marker (scripts/indexnow.py waits for build.txt to match the deployed commit)
+open(os.path.join(DIST, '7bdecd1a366e85c8cc48ab1761b452b8.txt'), 'w').write('7bdecd1a366e85c8cc48ab1761b452b8')
+open(os.path.join(DIST, 'build.txt'), 'w').write(os.environ.get('COMMIT_REF', 'local'))
 open(os.path.join(DIST, 'robots.txt'), 'w').write(f'''# Concepts Interiors & Home Decor, Kozhikode
 # All search engines and AI assistants are welcome to read this site.
 User-agent: *
