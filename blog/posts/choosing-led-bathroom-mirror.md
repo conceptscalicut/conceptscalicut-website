@@ -1,17 +1,18 @@
 ---
-title: "Choosing an LED Mirror for Your Bathroom"
-card_title: "Choosing an LED Mirror for Your Bathroom"
+title: Choosing an LED Mirror for Your Bathroom
 date: 2026-10-25
-description: "Shape, size, light colour and anti-fog: the four decisions that matter when buying a backlit LED bathroom mirror."
-summary: "Shape, size, light colour and anti-fog: the four decisions that matter."
-category: "Lighting"
-image: "/img/vanity-mirror.jpg"
-image_position: ""
-related_service: bathroom-interiors-kozhikode
-read_time: 3
-video: ""
 draft: false
 publish_now: false
+category: Lighting, mirros, LED mirrors
+image: /img/vanity-mirror.jpg
+image_position: ""
+summary: "Shape, size, light colour and anti-fog: the four decisions that matter."
+description: "Shape, size, light colour and anti-fog: the four decisions that
+  matter when buying a backlit LED bathroom mirror."
+video: ""
+related_service: bathroom-interiors-kozhikode
+card_title: Choosing an LED Mirror for Your Bathroom
+read_time: 3
 ---
 
 A backlit mirror adds soft, even light where you need it most. Four decisions decide whether you will love it.
