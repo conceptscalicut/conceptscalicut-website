@@ -1,17 +1,19 @@
 ---
-title: "Curtains or Blinds? Choosing for Kerala Light and Monsoon"
-card_title: "Curtains or Blinds for Kerala Homes?"
+title: Curtains or Blinds? Choosing for Kerala Light and Monsoon
 date: 2026-11-16
-description: "Curtains, zebra, roman or outdoor blinds? How to choose window coverings that handle Kerala sun, monsoon damp and privacy, room by room."
-summary: "How to pick curtains and blinds that handle strong sun, monsoon damp and privacy, room by room."
-category: "Soft furnishing"
-image: "/img/curtain-poster.jpg"
-image_position: ""
-related_service: home-decor-showroom-kozhikode
-read_time: 5
-video: ""
-draft: true
+draft: false
 publish_now: false
+category: Soft furnishing, curtains, blinds, home interior
+image: /img/curtain-poster.jpg
+image_position: ""
+summary: How to pick curtains and blinds that is suitable for your home privacy,
+  room by room.
+description: Curtains, zebra, roman or outdoor blinds? How to choose window
+  coverings that handle Kerala sun, monsoon damp and privacy, room by room.
+video: https://youtube.com/shorts/9y8TsCaDipk?si=upkuYKIv8TH5FItF
+related_service: home-decor-showroom-kozhikode
+card_title: Curtains or Blinds for Homes?
+read_time: 5
 ---
 
 Windows in a Kerala home have a hard job. They let in bright afternoon sun for most of the year, face driving rain for months during the monsoon, and often look straight onto a neighbour's house or a busy road. The right curtains or blinds make a room cooler, calmer and more private. The wrong ones fade, sag or smell musty after one wet season.
