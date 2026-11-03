@@ -49,8 +49,8 @@ prod_body = ('<section class="phero"><div class="wrap">' + crumbs([("Home", "./"
 all_groups = [g for c in site['catalog'] for g in c['groups']]
 item_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Interior and decor products at Concepts, Kozhikode",
              "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": g['name'], "url": f"{BASE}/products.html#{g['id']}"} for n, g in enumerate(all_groups)]}
-prod_doc = page('/products.html', 'Interior & Decor Products in Kozhikode: Wallpapers, Panels, Mirrors | Concepts',
-    'Interior and decor products in Kozhikode: wallpapers, wall panels, louvers, curtains, flooring, mirrors, curios, calligraphy, plants, pots and frames. Showroom 500 m from the railway station.',
+prod_doc = page('/products.html', 'Wallpapers, Curtains, Blinds, Mirrors & Home Decor in Calicut | Concepts',
+    'Home decor shop in Calicut: wallpapers, wall panels, false ceilings, curtains, blinds, flooring, LED mirrors, lighting, furniture and decor. Near the railway station.',
     prod_body, [item_list, crumb_schema([("Home", BASE + "/"), ("Products", BASE + "/products.html")])], site['catalog'][0]['cover'], 'products', prefix='')
 open(os.path.join(DIST, 'products.html'), 'w', encoding='utf8').write(prod_doc)
 URLS.append(('/products.html', 0.9))

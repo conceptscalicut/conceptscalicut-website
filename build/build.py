@@ -81,7 +81,7 @@ business = {
   "geo":{"@type":"GeoCoordinates","latitude":11.242428,"longitude":75.7844475},
   "hasMap":C['googleProfile'],
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"19:30"}],
-  "areaServed":[{"@type":"City","name":"Kozhikode"},{"@type":"AdministrativeArea","name":"Malabar region, Kerala"},{"@type":"AdministrativeArea","name":"Central Kerala"},{"@type":"State","name":"Kerala"}],
+  "areaServed":[{"@type":"City","name":"Kozhikode"},{"@type":"City","name":"Calicut"}]+[{"@type":"AdministrativeArea","name":d+" district, Kerala"} for d in ["Kozhikode","Malappuram","Kannur","Wayanad","Kasaragod","Palakkad","Thrissur"]]+[{"@type":"AdministrativeArea","name":"Malabar region, Kerala"},{"@type":"AdministrativeArea","name":"Central Kerala"},{"@type":"State","name":"Kerala"}],
   "hasOfferCatalog":{"@type":"OfferCatalog","name":"Interior and decor products","url":BASE+"/products.html","itemListElement":[{"@type":"OfferCatalog","name":c["name"],"itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Product","name":g["name"],"description":g["text"]}} for g in c["groups"]]} for c in site.get("catalog",[])]},
   "knowsLanguage":["en","ml"],
   "aggregateRating":{"@type":"AggregateRating","ratingValue":str(G['rating']),"reviewCount":str(G['count']),"bestRating":"5"},
@@ -186,7 +186,7 @@ for m in re.finditer(r'<summary data-t="\w+">(.*?)</summary><p data-t="\w+">(.*?
 
 HOME = {
  'en': dict(path='/', title='Interior Designers in Kozhikode (Calicut) | Concepts Interiors & Home Decor',
-            desc='Interior designers in Kozhikode for residential, commercial and hospitality spaces. Interior and decor products showroom near the railway station. Free site visit within Calicut city. Rated 4.9 on Google.'),
+            desc='Interior designers in Calicut (Kozhikode) for homes, offices, clinics and hotels, with a home decor showroom near the railway station. Rated 4.9 on Google.'),
  'ml': dict(path='/ml.html', title='കോഴിക്കോട്ടെ ഇന്റീരിയർ ഡിസൈനർമാർ | Concepts Interiors & Home Decor',
             desc='കോഴിക്കോട്ടെ റെസിഡൻഷ്യൽ, കൊമേഴ്സ്യൽ, ഹോസ്പിറ്റാലിറ്റി ഇടങ്ങൾക്കായി ഇന്റീരിയർ ഡിസൈൻ. മോഡുലാർ കിച്ചൻ, വാൾപേപ്പർ, LED മിറർ, LVT ഫ്ലോറിംഗ്. നഗരപരിധിയിൽ സൗജന്യ സൈറ്റ് വിസിറ്റ്. Google-ൽ 4.9 റേറ്റിംഗ്.'),
 }
@@ -444,7 +444,7 @@ open(os.path.join(DIST, 'llms.txt'), 'w', encoding='utf8').write(f'''# Concepts 
 - Instagram: {C['instagram']} · Facebook: {C['facebook']} · WhatsApp Channel: https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u
 - Languages: English, Malayalam
 - Showroom location: in the heart of Calicut, about 500 m from Kozhikode railway station.
-- Service area: based in Calicut, focused on the Malabar region and central Kerala; projects across Kerala and beyond depending on the project.
+- Service area: based in Calicut, focused on the Malabar region and central Kerala (Kozhikode, Malappuram, Kannur, Wayanad, Kasaragod, Palakkad and Thrissur districts); projects across Kerala and beyond depending on the project.
 - First a one-to-one meeting; then a free site visit within Calicut city limits. Project consultation is a paid professional service.
 - 3D design and itemised quotation before work begins.
 - Every project, small or big, is treated as the company's own; the aim is long-term relationships beyond a single contract.

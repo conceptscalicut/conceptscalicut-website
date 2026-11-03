@@ -12,6 +12,7 @@ SERVICES = [
  'lead':'From a single bedroom to a full villa, we plan, design and build the whole interior so every room feels like part of one home.',
  'service_type':'Interior design',
  'body':'''
+<p>Concepts is a team of home interior designers in Calicut (Kozhikode), designing and building villas, apartments and renovations across Kozhikode, Malappuram, Kannur, Wayanad and the rest of the Malabar region.</p>
 <p>Most homes in Kerala are finished room by room, by different people, and it shows. We plan the whole house together: layout, ceilings, lighting, wall finishes, furniture and soft furnishings. Colours, materials and details carry through from the living room to the bedrooms.</p>
 <h2>What we handle</h2>
 <ul>
@@ -180,12 +181,12 @@ SERVICES = [
 {
  'slug':'home-decor-showroom-kozhikode',
  'nav':'Home decor showroom',
- 'title':'Interior & Decor Products Showroom near Kozhikode Railway Station | Concepts',
- 'desc':'Interior and decor products showroom in the heart of Kozhikode, 500 m from the railway station: wallpapers, wall panels, louvers, curtains, flooring, mirrors, curios, calligraphy, plants and frames.',
+ 'title':'Home Decor Shop & Showroom in Calicut, near the Railway Station | Concepts',
+ 'desc':'Home decor shop in Calicut, 500 m from the railway station: wallpapers, panels, false ceilings, curtains, blinds, flooring, mirrors, lighting and decor.',
  'eyebrow':'Showroom · 500 m from Kozhikode railway station',
  'h1':'Home decor showroom in Kozhikode',
  'hero':'img/wallpaper-tropical.jpg',
- 'lead':'Wallpapers, LED mirrors, LVT flooring, curtains, lighting and decor accessories, with installation by our own team.',
+ 'lead':'A home decor shop and interior products showroom in Calicut: wallpapers, wall panels, false ceilings, curtains and blinds, flooring, LED mirrors, lighting and decor, with installation by our own team.',
  'service_type':'Home decor products and installation',
  'body':'''
 <p>Concepts started in 2020 as a decor accessories store, and the showroom is still at the heart of what we do. Seeing and touching a wallpaper, a mirror or a flooring plank in daylight makes choosing much easier.</p>
@@ -193,17 +194,26 @@ SERVICES = [
 <h3>Interior products</h3>
 <ul>
 <li><strong>Wall coverings:</strong> wallpapers, customised wallpapers printed to your wall size, wall textures and wall panels, installed by our team</li>
-<li><strong>Louvers:</strong> for feature walls, ceilings and partitions</li>
-<li><strong>Curtains and blinds:</strong> made to measure, stitched and fitted</li>
-<li><strong>Flooring:</strong> LVT luxury vinyl planks that can usually go over level existing tiles</li>
-<li><strong>Mirrors:</strong> plain, LED, decor, framed and pedestal mirrors</li>
+<li><strong>Louvers and wall panels:</strong> WPC louvers, 3D PVC panels and wall mouldings for feature walls and partitions</li>
+<li><strong>False ceilings:</strong> ceiling panels, wood-pattern ceiling boards and gypsum false ceilings</li>
+<li><strong>Curtains and blinds:</strong> made-to-measure curtains, zebra, roman, roller and vertical blinds, outdoor blinds and mosquito nets</li>
+<li><strong>Flooring:</strong> premium vinyl (LVT) flooring and carpet flooring</li>
+<li><strong>Mirrors:</strong> plain, LED, framed, wooden, asymmetric and pedestal mirrors</li>
+<li><strong>Lighting:</strong> LED wall and pendant lights, designer lighting, floor and table lamps</li>
+<li><strong>Customised furniture:</strong> sofas, dressing units and bedroom furniture</li>
 </ul>
 <h3>Decor products</h3>
 <ul>
 <li><strong>Curios:</strong> vases, table decor and showpieces</li>
 <li><strong>Wall decor and calligraphy:</strong> metal wall art and Arabic calligraphy in gold and black</li>
 <li><strong>Plants, pots and planters:</strong> artificial plants, vertical gardens and planters</li>
+<li><strong>Clocks:</strong> wooden, metal and vintage wall clocks</li>
 <li><strong>Picture frames:</strong> gallery-wall sets, including our Memories collection</li>
+</ul>
+<h3>Home appliances</h3>
+<ul>
+<li><strong>Water heaters:</strong> electric (AO Smith, Crompton, Venus, Havells and more) and gas water heaters</li>
+<li><strong>Water purifiers:</strong> authorised dealers of VIRON wall-mounted purifiers, plus AO Smith</li>
 </ul>
 <p><a class="link" href="../products.html">Browse all products</a></p>
 <h2>Visit us</h2>
