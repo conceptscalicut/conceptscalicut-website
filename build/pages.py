@@ -195,8 +195,8 @@ SERVICES = [
 <h3>Interior products</h3>
 <ul>
 <li><strong>Wall coverings:</strong> wallpapers, customised wallpapers printed to your wall size, wall textures and wall panels, installed by our team</li>
-<li><strong>Louvers and wall panels:</strong> WPC louvers, 3D PVC panels and wall mouldings for feature walls and partitions</li>
-<li><strong>False ceilings:</strong> ceiling panels, wood-pattern ceiling boards and gypsum false ceilings</li>
+<li><strong>Louvers and wall panels:</strong> PVC, WPC, charcoal and flexible louvers, 3D PVC panels and wall mouldings for feature walls and partitions</li>
+<li><strong>False ceilings:</strong> heat-resistant ceiling panels, wood-pattern ceiling boards and gypsum false ceilings</li>
 <li><strong>Curtains and blinds:</strong> made-to-measure curtains, zebra, roman, roller and vertical blinds, outdoor blinds and mosquito nets</li>
 <li><strong>Flooring:</strong> premium vinyl (LVT) flooring and carpet flooring</li>
 <li><strong>Mirrors:</strong> plain, LED, framed, wooden, asymmetric and pedestal mirrors</li>

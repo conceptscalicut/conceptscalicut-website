@@ -199,17 +199,52 @@ window.SITE = {
           "id": "louvers",
           "name": "Louvers & Wall Panels",
           "name_ml": "ലൂവറും വാൾ പാനലും",
-          "img": "img/courtyard-lounge.jpg",
-          "text": "WPC louvers and wall panels in wood, stone and metallic finishes for feature walls, ceilings and partitions.",
-          "text_ml": "ഫീച്ചർ വാളുകൾക്കും സീലിംഗിനും പാർട്ടീഷനുകൾക്കും ആഴവും ഭംഗിയും നൽകുന്ന ലൂവറുകൾ.",
+          "img": "img/products/louvers-wpc-wall-panels.jpg",
+          "text": "PVC, WPC, charcoal and flexible louvers for feature walls, TV walls, ceilings and partitions, supplied and installed by our team.",
+          "text_ml": "ഫീച്ചർ വാൾ, ടിവി വാൾ, സീലിംഗ്, പാർട്ടീഷൻ എന്നിവയ്ക്കായി PVC, WPC, ചാർക്കോൾ, ഫ്ലെക്സിബിൾ ലൂവറുകൾ; ഞങ്ങളുടെ ടീം സപ്ലൈ ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
           "items": [
-            "Louvers & WPC Wall Panels"
+            "WPC Louvers",
+            "PVC Louvers",
+            "Charcoal Louvers",
+            "Flexible Louvers"
           ],
           "products": [
             {
-              "name": "Louvers & WPC Wall Panels",
-              "text": "WPC panels 9.5 ft long and 6 inches wide, in wood, stone and metallic finishes.",
-              "img": "img/products/louvers-wpc-wall-panels.jpg"
+              "name": "WPC Louvers",
+              "img": "img/products/louvers-wpc-wall-panels.jpg",
+              "text": "Wood-plastic composite louvers, 9.5 ft long and 6 inches wide, in wood, stone and metallic finishes.",
+              "details": [
+                "Rigid and durable, with a realistic wood-grain look",
+                "Suited to feature walls, TV walls and partitions",
+                "Many colours and textures to choose from in our showroom"
+              ]
+            },
+            {
+              "name": "PVC Louvers",
+              "text": "Lightweight, water-resistant PVC louvers. A practical choice for feature walls, kitchens and budget-friendly makeovers.",
+              "details": [
+                "Water-resistant and easy to clean",
+                "Light, so quick to install",
+                "Wide range of colours and wood finishes"
+              ]
+            },
+            {
+              "name": "Charcoal Louvers",
+              "text": "Charcoal (bamboo-charcoal composite) louvers and panels with a smooth, premium finish in wood, marble and fabric textures.",
+              "details": [
+                "Premium look for living rooms, bedrooms and offices",
+                "Available as louvers and flat panels",
+                "See textures and finishes in our showroom"
+              ]
+            },
+            {
+              "name": "Flexible Louvers",
+              "text": "Bendable louvers that wrap around curved walls, columns, arches and rounded counters.",
+              "details": [
+                "Follows curves where rigid panels cannot",
+                "Ideal for columns, reception counters and arches",
+                "Matching finishes with our straight louvers"
+              ]
             }
           ]
         },
@@ -218,18 +253,24 @@ window.SITE = {
           "name": "False Ceilings",
           "name_ml": "ഫാൾസ് സീലിംഗ്",
           "img": "img/products/false-ceiling-panels.jpg",
-          "text": "Ceiling panels, wood-pattern boards and gypsum false ceilings with integrated lighting.",
-          "text_ml": "സീലിംഗ് പാനലുകൾ, വുഡ്-പാറ്റേൺ ബോർഡുകൾ, ലൈറ്റിംഗോടുകൂടിയ ജിപ്സം ഫാൾസ് സീലിംഗ്.",
+          "text": "Heat-resistant ceiling panels, wood-pattern ceiling boards and gypsum false ceilings with integrated lighting.",
+          "text_ml": "ചൂട് പ്രതിരോധിക്കുന്ന സീലിംഗ് പാനലുകൾ, വുഡ്-പാറ്റേൺ ബോർഡുകൾ, ലൈറ്റിംഗോടുകൂടിയ ജിപ്സം ഫാൾസ് സീലിംഗ്.",
           "products": [
             {
               "name": "False Ceiling Panels",
-              "text": "Water-resistant ceiling panels. Quick to install and easy to maintain.",
+              "text": "Water-resistant ceiling panels that install quickly and are easy to maintain.",
               "img": "img/products/false-ceiling-panels.jpg"
             },
             {
-              "name": "Wood-Pattern Ceiling Boards",
-              "text": "Solid ceiling boards with a natural wood look, for a warm finish overhead.",
-              "img": "img/products/wood-pattern-ceiling-boards.jpg"
+              "name": "Heat-Resistant Ceiling Panels",
+              "text": "Heat-resistant (Heatout) ceiling panels with a natural wood pattern, a popular choice under roofs and sheet ceilings to keep rooms more comfortable.",
+              "img": "img/products/wood-pattern-ceiling-boards.jpg",
+              "details": [
+                "Heat-resistant panels for false ceilings",
+                "Natural wood-grain finish",
+                "Quick installation and easy maintenance",
+                "Water-resistant"
+              ]
             },
             {
               "name": "Gypsum False Ceilings",
@@ -239,7 +280,7 @@ window.SITE = {
           ],
           "items": [
             "False Ceiling Panels",
-            "Wood-Pattern Ceiling Boards",
+            "Heat-Resistant Ceiling Panels",
             "Gypsum False Ceilings"
           ]
         },
@@ -330,7 +371,7 @@ window.SITE = {
             "Pedestal Mirrors",
             "Plain Mirrors",
             "Asymmetric Mirrors",
-            "Mirror Decor"
+            "Decor Mirrors"
           ],
           "products": [
             {
@@ -364,8 +405,13 @@ window.SITE = {
               "img": "img/products/asymmetric-mirrors.jpg"
             },
             {
-              "name": "Mirror Decor",
-              "text": "Self-adhesive decorative mirror shapes, customisable to your design."
+              "name": "Decor Mirrors",
+              "text": "Sun, sunflower and starburst decor mirrors, plus self-adhesive mirror shapes, to make a wall the centrepiece of a room.",
+              "details": [
+                "Sun, sunflower and starburst designs",
+                "Gold, silver and black frames",
+                "Self-adhesive mirror shapes, customisable to your design"
+              ]
             }
           ]
         },
