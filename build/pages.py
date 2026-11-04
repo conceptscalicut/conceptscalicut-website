@@ -199,7 +199,6 @@ SERVICES = [
 <li><strong>Curtains and blinds:</strong> made-to-measure curtains, zebra, roman, roller and vertical blinds, outdoor blinds and mosquito nets</li>
 <li><strong>Flooring:</strong> premium vinyl (LVT) flooring and carpet flooring</li>
 <li><strong>Mirrors:</strong> plain, LED, framed, wooden, asymmetric and pedestal mirrors</li>
-<li><strong>Lighting:</strong> LED wall and pendant lights, designer lighting, floor and table lamps</li>
 <li><strong>Customised furniture:</strong> sofas, dressing units and bedroom furniture</li>
 </ul>
 <h3>Decor products</h3>
@@ -210,10 +209,10 @@ SERVICES = [
 <li><strong>Clocks:</strong> wooden, metal and vintage wall clocks</li>
 <li><strong>Picture frames:</strong> gallery-wall sets, including our Memories collection</li>
 </ul>
-<h3>Home appliances</h3>
+<h3>Lighting solutions</h3>
 <ul>
-<li><strong>Water heaters:</strong> electric (AO Smith, Crompton, Venus, Havells and more) and gas water heaters</li>
-<li><strong>Water purifiers:</strong> authorised dealers of VIRON wall-mounted purifiers, plus AO Smith</li>
+<li><strong>LED lights:</strong> LED wall lights, profile and cove lighting, spotlights, downlights and outdoor fittings</li>
+<li><strong>Fancy lights and lamps:</strong> pendant and hanging lights, chandeliers, floor lamps and table lamps</li>
 </ul>
 <p><a class="link" href="../products.html">Browse all products</a></p>
 <h2>Visit us</h2>

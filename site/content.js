@@ -136,7 +136,7 @@ window.SITE = {
       "id": "interior",
       "name": "Interior Products",
       "name_ml": "ഇന്റീരിയർ ഉൽപ്പന്നങ്ങൾ",
-      "intro": "Materials and fittings that shape a room: walls, ceilings, windows, floors, mirrors, lighting and furniture, supplied and installed by our team.",
+      "intro": "Materials and fittings that shape a room: walls, ceilings, windows, floors, mirrors and furniture, supplied and installed by our team.",
       "intro_ml": "മുറിയുടെ രൂപം നിർണ്ണയിക്കുന്ന മെറ്റീരിയലുകളും ഫിറ്റിംഗുകളും: ചുമരുകൾ, ജനലുകൾ, തറ, മിററുകൾ. ഞങ്ങളുടെ ടീം സപ്ലൈ ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
       "cover": "img/tv-unit.jpg",
       "groups": [
@@ -370,42 +370,6 @@ window.SITE = {
           ]
         },
         {
-          "id": "lighting",
-          "name": "Lighting",
-          "name_ml": "ലൈറ്റിംഗ്",
-          "img": "img/products/designer-lighting.jpg",
-          "text": "Indoor and outdoor LED lights, designer lighting, pedestal lamps and table lamps.",
-          "text_ml": "ഇൻഡോർ, ഔട്ട്ഡോർ LED ലൈറ്റുകൾ, ഡിസൈനർ ലൈറ്റിംഗ്, പെഡസ്റ്റൽ ലാമ്പുകൾ, ടേബിൾ ലാമ്പുകൾ.",
-          "products": [
-            {
-              "name": "LED Lights",
-              "text": "Wall lights, pendants and hanging sets for indoor, outdoor and dining spaces.",
-              "img": "img/products/led-lights.jpg"
-            },
-            {
-              "name": "Designer Lighting",
-              "text": "Custom-designed lighting for corridors, ceilings and feature walls.",
-              "img": "img/products/designer-lighting.jpg"
-            },
-            {
-              "name": "Pedestal Lamps",
-              "text": "Floor lamps with turned wooden stands and fabric shades.",
-              "img": "img/products/pedestal-lamps.jpg"
-            },
-            {
-              "name": "Table Lamps in Natural Wood",
-              "text": "Table and floor lamps with natural driftwood bases and fabric shades.",
-              "img": "img/products/table-lamps-in-natural-wood.jpg"
-            }
-          ],
-          "items": [
-            "LED Lights",
-            "Designer Lighting",
-            "Pedestal Lamps",
-            "Table Lamps in Natural Wood"
-          ]
-        },
-        {
           "id": "furniture",
           "name": "Customised Furniture",
           "name_ml": "കസ്റ്റമൈസ്ഡ് ഫർണിച്ചർ",
@@ -628,45 +592,69 @@ window.SITE = {
       ]
     },
     {
-      "id": "appliances",
-      "name": "Home Appliances",
-      "name_ml": "ഹോം അപ്ലയൻസുകൾ",
-      "intro": "Water heaters and water purifiers from trusted brands, supplied and installed.",
-      "intro_ml": "വിശ്വസനീയ ബ്രാൻഡുകളുടെ വാട്ടർ ഹീറ്ററുകളും പ്യൂരിഫയറുകളും, സപ്ലൈയും ഇൻസ്റ്റലേഷനും.",
-      "cover": "img/products/viron-water-purifiers.jpg",
+      "id": "lighting-solutions",
+      "name": "Lighting Solutions",
+      "name_ml": "ലൈറ്റിംഗ് സൊല്യൂഷൻസ്",
+      "intro": "LED lights, fancy lights and lamps for homes, offices, shops and restaurants, chosen and installed by our team.",
+      "intro_ml": "വീടുകൾക്കും ഓഫീസുകൾക്കും കടകൾക്കും റെസ്റ്റോറന്റുകൾക്കും LED ലൈറ്റുകൾ, ഫാൻസി ലൈറ്റുകൾ, ലാമ്പുകൾ; ഞങ്ങളുടെ ടീം തിരഞ്ഞെടുത്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
+      "cover": "img/products/designer-lighting.jpg",
       "groups": [
         {
-          "id": "water",
-          "name": "Water Heaters & Purifiers",
-          "name_ml": "വാട്ടർ ഹീറ്ററും പ്യൂരിഫയറും",
-          "img": "img/products/electric-water-heaters.jpg",
-          "text": "Electric and gas water heaters, and water purifiers as authorised dealers.",
-          "text_ml": "ഇലക്ട്രിക്, ഗ്യാസ് വാട്ടർ ഹീറ്ററുകൾ; അംഗീകൃത ഡീലർമാരായി വാട്ടർ പ്യൂരിഫയറുകൾ.",
+          "id": "led-lights",
+          "name": "LED Lights",
+          "name_ml": "LED ലൈറ്റുകൾ",
+          "img": "img/products/designer-lighting.jpg",
+          "text": "Energy-efficient LED lighting for homes, offices, shops and restaurants, indoors and outdoors.",
+          "text_ml": "വീടുകൾക്കും ഓഫീസുകൾക്കും കടകൾക്കും റെസ്റ്റോറന്റുകൾക്കും അകത്തും പുറത്തും LED ലൈറ്റിംഗ്.",
           "products": [
             {
-              "name": "Electric Water Heaters",
-              "text": "3 L to 25 L, horizontal and vertical, from AO Smith, Crompton, Venus, Havells and more.",
-              "img": "img/products/electric-water-heaters.jpg"
+              "name": "LED Wall Lights",
+              "text": "Up-down and decorative LED wall lights for interiors, facades and gardens.",
+              "img": "img/products/led-lights.jpg"
             },
             {
-              "name": "Gas Water Heaters",
-              "text": "Instant hot water without electricity, for homes, resorts, restaurants and hotels."
+              "name": "Profile & Cove Lighting",
+              "text": "LED profile, cove and corridor lighting, designed and installed by our team.",
+              "img": "img/products/designer-lighting.jpg"
             },
             {
-              "name": "VIRON Water Purifiers",
-              "text": "Authorised dealers. Wall-mounted RO and UV purifiers in various capacities.",
-              "img": "img/products/viron-water-purifiers.jpg"
-            },
-            {
-              "name": "AO Smith Water Purifiers",
-              "text": "Water purifiers for home and office needs."
+              "name": "Indoor & Outdoor LED Fittings",
+              "text": "Spotlights, downlights, panel lights and outdoor fittings for every space."
             }
           ],
           "items": [
-            "Electric Water Heaters",
-            "Gas Water Heaters",
-            "VIRON Water Purifiers",
-            "AO Smith Water Purifiers"
+            "LED Wall Lights",
+            "Profile & Cove Lighting",
+            "Indoor & Outdoor LED Fittings"
+          ]
+        },
+        {
+          "id": "fancy-lights",
+          "name": "Fancy Lights & Lamps",
+          "name_ml": "ഫാൻസി ലൈറ്റുകളും ലാമ്പുകളും",
+          "img": "img/products/table-lamps-in-natural-wood.jpg",
+          "text": "Decorative lighting that sets the mood: pendants, hanging sets, floor lamps and table lamps.",
+          "text_ml": "മൂഡ് ഒരുക്കുന്ന ഡെക്കറേറ്റീവ് ലൈറ്റിംഗ്: പെൻഡന്റുകൾ, ഹാംഗിംഗ് സെറ്റുകൾ, ഫ്ലോർ ലാമ്പുകൾ, ടേബിൾ ലാമ്പുകൾ.",
+          "products": [
+            {
+              "name": "Fancy Pendant & Hanging Lights",
+              "text": "Pendant lights, hanging sets and chandeliers for living, dining and restaurant spaces."
+            },
+            {
+              "name": "Pedestal Lamps",
+              "text": "Floor lamps with turned wooden stands and fabric shades.",
+              "img": "img/products/pedestal-lamps.jpg"
+            },
+            {
+              "name": "Table Lamps in Natural Wood",
+              "text": "Table and floor lamps with natural driftwood bases and fabric shades.",
+              "img": "img/products/table-lamps-in-natural-wood.jpg"
+            }
+          ],
+          "items": [
+            "Fancy Pendant & Hanging Lights",
+            "Pedestal Lamps",
+            "Table Lamps in Natural Wood"
           ]
         }
       ]
