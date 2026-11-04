@@ -13,7 +13,8 @@ SERVICES = [
  'service_type':'Interior design',
  'body':'''
 <p>Concepts is a team of home interior designers in Calicut (Kozhikode), designing and building villas, apartments and renovations across Kozhikode, Malappuram, Kannur, Wayanad and the rest of the Malabar region.</p>
-<p>Most homes in Kerala are finished room by room, by different people, and it shows. We plan the whole house together: layout, ceilings, lighting, wall finishes, furniture and soft furnishings. Colours, materials and details carry through from the living room to the bedrooms.</p>
+<p>Many homes are finished room by room, by different people, and it shows. We plan the whole house together: layout, ceilings, lighting, wall finishes, furniture and soft furnishings. Colours, materials and details carry through from the living room to the bedrooms.</p>
+<p>There is no Concepts house style. Modern, minimal, contemporary, luxury, classic or traditional, the look is yours; our job is to make it work for the way your family lives and for your budget.</p>
 <h2>What we handle</h2>
 <ul>
 <li>Space planning and furniture layouts for living, dining and bedrooms</li>
@@ -39,15 +40,15 @@ SERVICES = [
  'slug':'modular-kitchens-wardrobes-kozhikode',
  'nav':'Modular kitchens & wardrobes',
  'title':'Modular Kitchen & Wardrobe Makers in Kozhikode | Concepts',
- 'desc':'Modular kitchens, wardrobes and TV units in Kozhikode, built by our own carpenters at your site or in our workshop, with boards chosen for Kerala humidity.',
+ 'desc':'Modular kitchens, wardrobes and TV units in Kozhikode, designed around how you cook and store, and built by our own carpenters at your site or in our workshop.',
  'eyebrow':'Kitchens · Wardrobes · Kozhikode',
  'h1':'Modular kitchens and wardrobes in Kozhikode',
  'hero':'img/kitchen-gloss.jpg',
- 'lead':'Kitchens, wardrobes, TV units and utility areas designed around how you cook and store, and built to cope with Kerala\'s humidity.',
+ 'lead':'Kitchens, wardrobes, TV units and utility areas designed around how you cook and store, in the style you choose, and built to last.',
  'service_type':'Modular kitchen design and installation',
  'body':'''
 <p>A kitchen is used every day, several times a day, so the planning matters as much as the finish. We start with how you cook, where things are stored and who uses the space, then design a layout in 3D before anything is cut.</p>
-<h2>Built for Kerala's climate</h2>
+<h2>Built to last</h2>
 <p>Humidity is the main enemy of kitchens and wardrobes here. We use boiling-water-resistant plywood in wet areas such as under the sink, seal every cut edge, and leave ventilation where cabinets sit against external walls. Finishes such as laminate, acrylic and lacquered glass are easy to wipe and handle moisture well.</p>
 <h2>What we make</h2>
 <ul>

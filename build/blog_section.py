@@ -77,7 +77,7 @@ for p in POSTS:
 path = '/journal/'
 body = (
     '<section class="phero"><div class="wrap">\n  ' + crumbs([("Home", "../"), ("Blog", None)]) +
-    '\n  <p class="eyebrow">Concepts Blog</p><h1>Ideas and Advice for Kerala Homes</h1>\n'
+    '\n  <p class="eyebrow">Concepts Blog</p><h1>Ideas and Advice for Your Space</h1>\n'
     '  <p class="lede">Practical notes on materials, finishes, decor and planning from our design team and showroom in Kozhikode.</p>\n'
     '</div></section>\n<section class="block" style="padding-top:10px"><div class="wrap">'
     f'<div class="posts">{"".join(post_card(p, "../") for p in POSTS)}</div>\n'
@@ -89,6 +89,6 @@ schema = [{"@context": "https://schema.org", "@type": "Blog", "name": "Concepts 
           crumb_schema([("Home", BASE + "/"), ("Blog", BASE + path)])]
 open(os.path.join(DIST, 'journal', 'index.html'), 'w', encoding='utf8').write(
     page(path, 'Concepts Blog: Interior and Decor Ideas | Kozhikode',
-         'Practical interior design and home decor advice for Kerala homes from Concepts, Kozhikode: materials, humidity, finishes, mirrors, flooring and more.',
+         'Practical interior design and home decor advice from Concepts, Kozhikode: materials, finishes, lighting, mirrors, flooring and more.',
          body, schema, POSTS[0]['img'] if POSTS else 'img/transformation-poster.jpg', 'blog'))
 URLS.append((path, 0.7))

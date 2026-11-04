@@ -387,7 +387,7 @@ from email.utils import format_datetime
 def _rfc(d): return format_datetime(datetime.datetime.fromisoformat(d + 'T09:00:00+05:30'))
 items = ''.join(f"""<item><title>{esc(m['title'])}</title><link>{BASE}/journal/{m['slug']}.html</link><guid isPermaLink="true">{BASE}/journal/{m['slug']}.html</guid><pubDate>{_rfc(m['date'])}</pubDate><description>{esc(m['desc'])}</description><enclosure url="{BASE}/{m['img']}" type="image/jpeg" length="0"/></item>""" for m in POSTS[:20])
 open(os.path.join(DIST, 'feed.xml'), 'w', encoding='utf8').write(f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concepts Blog: Interiors and Decor Ideas from Kozhikode</title><link>{BASE}/journal/</link><atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/><description>Practical interior design and home decor advice for Kerala homes, from Concepts Interiors &amp; Home Decor, Kozhikode.</description><language>en-in</language>{items}</channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concepts Blog: Interiors and Decor Ideas from Kozhikode</title><link>{BASE}/journal/</link><atom:link href="{BASE}/feed.xml" rel="self" type="application/rss+xml"/><description>Practical interior design and home decor advice from Concepts Interiors &amp; Home Decor, Kozhikode.</description><language>en-in</language>{items}</channel></rss>
 """)
 
 open(os.path.join(DIST, 'sitemap.xml'), 'w', encoding='utf8').write('\n'.join(sm) + '\n')
