@@ -251,7 +251,7 @@ document.querySelectorAll('a.wa').forEach(a => { a.href = 'https://wa.me/' + WA 
 const nav = document.getElementById('nav'), btn = document.getElementById('menuBtn');
 if (btn) btn.onclick = () => { const o = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', o); };
 const GA = String((S.analytics || {}).ga4 || '').trim();
-const live = /(^|\.)conceptscalicut\.com$/.test(location.hostname) || /\.netlify\.app$/.test(location.hostname);
+const live = /(^|\.)conceptscalicut\.com$/.test(location.hostname);
 let track = () => {};
 if (/^G-[A-Z0-9]+$/.test(GA) && live) {
   const sc = document.createElement('script'); sc.async = true; sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA; document.head.appendChild(sc);
@@ -394,7 +394,7 @@ open(os.path.join(DIST, 'sitemap.xml'), 'w', encoding='utf8').write('\n'.join(sm
 
 # IndexNow key file and build marker (scripts/indexnow.py waits for build.txt to match the deployed commit)
 open(os.path.join(DIST, '7bdecd1a366e85c8cc48ab1761b452b8.txt'), 'w').write('7bdecd1a366e85c8cc48ab1761b452b8')
-open(os.path.join(DIST, 'build.txt'), 'w').write(os.environ.get('COMMIT_REF', 'local'))
+open(os.path.join(DIST, 'build.txt'), 'w').write(os.environ.get('CF_PAGES_COMMIT_SHA') or os.environ.get('COMMIT_REF', 'local'))
 open(os.path.join(DIST, 'robots.txt'), 'w').write(f'''# Concepts Interiors & Home Decor, Kozhikode
 # All search engines and AI assistants are welcome to read this site.
 User-agent: *
@@ -487,4 +487,15 @@ open(os.path.join(DIST, '_redirects'), 'w').write('''# The bare domain -> www re
 /review      https://search.google.com/local/writereview?placeid=ChIJpfdfdWhZpjsRFLl5CqPjCvU  302
 /whatsapp    https://wa.me/919544355406  302
 ''')
+
+# Clean URLs: Cloudflare Pages serves /products.html at /products (and redirects .html there),
+# so every link, canonical tag and sitemap entry points straight at the final address.
+_clean = re.compile(r'(?<=[\w-])\.html(?=["\'#?<)\s`,\]]|$)', re.M)
+for _root, _dirs, _files in os.walk(DIST):
+    for _f in _files:
+        if _f.endswith(('.html', '.xml', '.txt', '.js', '.json', '.webmanifest')) or _f == '_redirects':
+            _p = os.path.join(_root, _f)
+            _s = open(_p, encoding='utf8').read()
+            _n = _clean.sub('', _s)
+            if _n != _s: open(_p, 'w', encoding='utf8').write(_n)
 print('built', len(URLS), 'pages into', os.path.abspath(DIST))

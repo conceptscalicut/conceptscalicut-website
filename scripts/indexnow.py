@@ -42,11 +42,11 @@ urls = set()
 posts = [f for f in changed if f.startswith('blog/posts/') and f.endswith('.md')]
 other = [f for f in changed if not f.startswith(('blog/', '.github/', 'scripts/', 'admin/')) and f not in ('README.md',)]
 for f in posts:
-    urls.add(f'{BASE}/journal/{os.path.basename(f)[:-3]}.html')
+    urls.add(f'{BASE}/journal/{os.path.basename(f)[:-3]}')
 for slug in extra:
-    urls.add(f'{BASE}/journal/{slug}.html')
+    urls.add(f'{BASE}/journal/{slug}')
 if posts or extra:
-    urls.update({f'{BASE}/', f'{BASE}/ml.html', f'{BASE}/journal/'})
+    urls.update({f'{BASE}/', f'{BASE}/ml', f'{BASE}/journal/'})
 if other or '*' in changed or not urls:
     # site or build changed: submit every page in the live sitemap
     urls.update(re.findall(r'<loc>([^<]+)</loc>', get(f'{BASE}/sitemap.xml')))

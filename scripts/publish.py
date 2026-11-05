@@ -96,7 +96,7 @@ if not key:
 else:
     # ---- 2. wait until the pages are online ----
     for p in to_email:
-        url = f'{BASE}/journal/{p["slug"]}.html'
+        url = f'{BASE}/journal/{p["slug"]}'
         for attempt in range(40):
             try:
                 with urllib.request.urlopen(urllib.request.Request(url, headers={'Cache-Control': 'no-cache'}), timeout=20) as r:
@@ -114,7 +114,7 @@ else:
     # ---- 3. build and send one email for all new posts ----
     def card(p):
         img = BASE + '/' + str(p.get('image') or '/img/transformation-poster.jpg').lstrip('/')
-        url = f'{BASE}/journal/{p["slug"]}.html?utm_source=newsletter&utm_medium=email&utm_campaign=blog'
+        url = f'{BASE}/journal/{p["slug"]}?utm_source=newsletter&utm_medium=email&utm_campaign=blog'
         return f'''<tr><td style="padding:0 0 28px">
 <a href="{url}"><img src="{html.escape(img)}" width="560" alt="" style="width:100%;max-width:560px;height:auto;display:block;border:0"></a>
 <p style="margin:16px 0 4px;font:600 11px/1.4 Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#B39060">{html.escape(str(p.get("category") or "Concepts Blog"))}</p>
