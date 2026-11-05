@@ -471,7 +471,7 @@ html[lang="ml"] .chap b{font-size:.98rem}
   <symbol id="i-g" viewBox="0 0 24 24"><path fill="currentColor" d="M21.6 12.2c0-.7-.06-1.37-.18-2H12v3.8h5.4a4.6 4.6 0 0 1-2 3v2.5h3.24c1.9-1.75 2.96-4.32 2.96-7.3ZM12 22c2.7 0 4.97-.9 6.63-2.43l-3.24-2.5c-.9.6-2.04.96-3.39.96-2.6 0-4.81-1.76-5.6-4.12H3.06v2.6A10 10 0 0 0 12 22Zm-5.6-8.1a6 6 0 0 1 0-3.8V7.5H3.06a10 10 0 0 0 0 9l3.34-2.6ZM12 5.98c1.47 0 2.79.5 3.83 1.5l2.87-2.87A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.94 5.5l3.34 2.6C7.19 7.740 9.4 5.98 12 5.98Z"/></symbol>
 </svg>
 
-<script>if(/(invite|recovery|confirmation|email_change)_token=/.test(location.hash))location.replace("/admin/"+location.hash);</script>
+
 <header class="top" id="top">
   <div class="wrap">
     <a class="brand" href="#home" aria-label="Concepts home">
@@ -671,8 +671,8 @@ html[lang="ml"] .chap b{font-size:.98rem}
     <p class="allposts"><a class="btn btn-ghost btn-sm" href="journal/" data-t="bl1">All Blog Posts</a></p>
     <div class="follow" id="subscribe">
       <div><p class="eyebrow" data-t="fw1">Stay Updated</p><h3 data-t="fw2">New Projects, Products and Ideas, Every Week</h3><p class="lede" data-t="fw3">Get each new blog post and showroom arrival by email, or follow Concepts where you already spend time.</p>
-        <form class="sub" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="newsletter"><input type="hidden" name="source" value="home">
+        <form class="sub" name="newsletter" method="POST" action="/api/subscribe">
+          <input type="hidden" name="source" value="home">
           <p hidden><label>Leave this empty <input name="bot-field"></label></p>
           <label class="vh" for="subEmail" data-t="fw6">Email address</label>
           <div class="sub-row"><input id="subEmail" type="email" name="email" required autocomplete="email" placeholder="Your email address" data-iph="നിങ്ങളുടെ ഇമെയിൽ വിലാസം"><button class="btn btn-gold btn-sm" type="submit" data-t="fw7">Subscribe</button></div>
@@ -966,7 +966,7 @@ const toBrevo = f => { try { const b = new FormData(); b.append('EMAIL', f.email
 $$('form.sub').forEach(f => f.addEventListener('submit', e => {
   e.preventDefault();
   toBrevo(f);
-  fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(f)).toString()})
+  fetch('/api/subscribe', {method:'POST', body:new FormData(f)})
     .then(r => { if (!r.ok) throw 0; f.querySelector('.sub-ok').hidden = false; f.querySelector('.sub-row').hidden = true; track('newsletter_signup', {source: f.source ? f.source.value : 'home'}); })
     .catch(() => f.submit());
 }));

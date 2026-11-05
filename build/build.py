@@ -243,7 +243,7 @@ css += open(os.path.join(HERE, 'products_css.txt'), encoding='utf8').read() + ''
 os.makedirs(os.path.join(DIST, 'assets'), exist_ok=True)
 open(os.path.join(DIST, 'assets', 'site.css'), 'w', encoding='utf8').write(css)
 open(os.path.join(DIST, 'assets', 'page.js'), 'w', encoding='utf8').write(r'''function toBrevo(f){try{var b=new FormData();b.append('EMAIL',f.email.value);b.append('email_address_check','');b.append('locale','en');b.append('html_type','simple');fetch('https://849c43ba.sibforms.com/serve/MUIFAOn_XgMTpekZm7AOYBc4bGraVsh1ZAD024hpJ_1as1GIt86E3Vl-vIS6zHoSKnmhARktYgUmgYz_tas7l0Sdt1vrvj52Ilp8NxIwpbIZLJAZoCoIRAdncY0Meil28DauY4B9Wd_Dav9fU1IZ78bA_chP04c4DldZPoOBuISMXOw4UXVU-s1NeNAdIiPZUZwL5E_Lwc8X0ie0rA',{method:'POST',mode:'no-cors',body:b})}catch(_){}}
-document.querySelectorAll('form.sub').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();toBrevo(f);fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()}).then(function(r){if(!r.ok)throw 0;f.querySelector('.sub-ok').hidden=false;f.querySelector('.sub-row').hidden=true;try{gtag('event','newsletter_signup',{source:f.source.value})}catch(_){}}).catch(function(){f.submit()})})});
+document.querySelectorAll('form.sub').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();toBrevo(f);fetch('/api/subscribe',{method:'POST',body:new FormData(f)}).then(function(r){if(!r.ok)throw 0;f.querySelector('.sub-ok').hidden=false;f.querySelector('.sub-row').hidden=true;try{gtag('event','newsletter_signup',{source:f.source.value})}catch(_){}}).catch(function(){f.submit()})})});
 (function(){
 const S = window.SITE || {}, C = S.contact || {};
 const WA = C.whatsapp || '919544355406';
@@ -480,7 +480,7 @@ open(os.path.join(DIST, '_headers'), 'w').write('''/*
 /content.js
   Cache-Control: public, max-age=300
 ''')
-open(os.path.join(DIST, '_redirects'), 'w').write('''# The bare domain -> www redirect is handled by Netlify's primary domain setting.
+open(os.path.join(DIST, '_redirects'), 'w').write('''# The bare domain -> www redirect is a Cloudflare redirect rule (Rules > Redirect Rules).
 # Friendly short links
 /malayalam   /ml.html   301
 /reviews     /#reviews  301

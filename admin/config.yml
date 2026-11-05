@@ -1,8 +1,11 @@
 # Concepts blog editor (Decap CMS). Opens at https://www.conceptscalicut.com/admin/
-# Team members log in with the email invite sent from Netlify (Project > Identity).
+# Team members log in with their GitHub account (they must be added as collaborators on the GitHub repository).
 
 backend:
-  name: git-gateway
+  name: github
+  repo: conceptscalicut/conceptscalicut-website
+  base_url: https://www.conceptscalicut.com
+  auth_endpoint: api/auth
   branch: main
   commit_messages:
     create: 'Blog: new post "{{slug}}"'

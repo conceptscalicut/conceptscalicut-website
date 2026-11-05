@@ -1,6 +1,6 @@
 # conceptscalicut.com
 
-Website for Concepts Interiors & Home Decor, Kozhikode. Hosted on Netlify (project `conceptscalicut`).
+Website for Concepts Interiors & Home Decor, Kozhikode. Hosted on Cloudflare Pages (project `conceptscalicut`), built from this repository on every push.
 
 | Folder | What it is |
 |---|---|
