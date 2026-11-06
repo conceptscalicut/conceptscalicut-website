@@ -22,7 +22,7 @@ window.SITE = {
     phoneDisplay: "+91 95443 55406",
     phoneLink: "+919544355406",
     email: "info@conceptscalicut.com",
-    address: "St Patrick Church Building, near AKG Flyover, Pushpa Junction, Chalappuram, Kozhikode, Kerala 673002",
+    address: "St Patrick Church Building, Francis Road, near Kozhikode Railway Station, Kozhikode, Kerala 673002",
     hours: [
       ["Monday – Saturday", "9:30 am – 7:30 pm"],
       ["Sunday", "Closed"]
@@ -664,6 +664,22 @@ window.SITE = {
             "Dressing Units",
             "Bedroom Furniture"
           ]
+        },
+        {
+          "id": "water-purifiers",
+          "name": "Water Purifiers",
+          "name_ml": "വാട്ടർ പ്യൂരിഫയറുകൾ",
+          "text": "Indoor and large outdoor water purifiers, supplied and installed by our team.",
+          "text_ml": "വീടുകൾക്കും വലിയ ഇടങ്ങൾക്കും വാട്ടർ പ്യൂരിഫയറുകൾ; ഞങ്ങളുടെ ടീം സപ്ലൈ ചെയ്ത് ഇൻസ്റ്റാൾ ചെയ്യുന്നു.",
+          "items": [
+            "Water Purifiers"
+          ],
+          "products": [
+            {
+              "name": "Water Purifiers",
+              "text": "Indoor and large-scale outdoor water purifiers from Aquaguard (Eureka Forbes), AO Smith and VIRON."
+            }
+          ]
         }
       ]
     },
@@ -684,7 +700,8 @@ window.SITE = {
           "text_ml": "കറുപ്പ്, വെളുപ്പ്, ഗോൾഡ് നിറങ്ങളിൽ ടെക്സ്ചർഡ് സെറാമിക് വാസുകൾ, ടേബിൾ പീസുകൾ, ഷോപീസുകൾ.",
           "items": [
             "Curios & Vases",
-            "Flowers & Vases"
+            "Flowers & Vases",
+            "Aquariums"
           ],
           "products": [
             {
@@ -705,6 +722,10 @@ window.SITE = {
                 "img/products/g/flowers-vases-4.jpg",
                 "img/products/g/flowers-vases-5.jpg"
               ]
+            },
+            {
+              "name": "Aquariums",
+              "text": "Aquariums for homes, offices and clinics. Ask us for sizes and options."
             }
           ]
         },
@@ -716,7 +737,8 @@ window.SITE = {
           "text": "Metal wall art and accent pieces that become the focus of a room.",
           "text_ml": "മുറിയുടെ ശ്രദ്ധാകേന്ദ്രമാകുന്ന മെറ്റൽ വാൾ ആർട്ടും ആക്സന്റ് പീസുകളും.",
           "items": [
-            "Metal Wall Art"
+            "Metal Wall Art",
+            "Wooden Name Plates"
           ],
           "products": [
             {
@@ -731,6 +753,10 @@ window.SITE = {
                 "img/products/g/metal-wall-art-7.jpg",
                 "img/products/g/metal-wall-art-8.jpg"
               ]
+            },
+            {
+              "name": "Wooden Name Plates",
+              "text": "Wooden name plates for homes and offices, made to your name and design."
             }
           ]
         },
@@ -831,7 +857,8 @@ window.SITE = {
             "Artificial Indoor Plants",
             "Artificial Green Walls",
             "Bonsai & Miniature Plants",
-            "Artificial Trees"
+            "Artificial Trees",
+            "Landscaping"
           ],
           "products": [
             {
@@ -882,6 +909,10 @@ window.SITE = {
                 "img/products/g/artificial-trees-7.jpg",
                 "img/products/g/artificial-trees-8.jpg"
               ]
+            },
+            {
+              "name": "Landscaping",
+              "text": "Landscaping for homes and commercial spaces. Ask us for ideas and a site visit."
             }
           ]
         },

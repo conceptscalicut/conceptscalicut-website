@@ -83,3 +83,11 @@
 .pm-related button:hover{color:var(--gold)}
 .pm-related img,.pm-noimg{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 16%,var(--card)),var(--card))}
 @media (max-width:760px){.pm-inner{grid-template-columns:1fr}.pm-main{aspect-ratio:1;max-height:56vh}.pmodal{width:100vw;max-width:100vw;max-height:100dvh;height:100dvh;margin:0}.pm-inner{max-height:100dvh}}
+.pt-links{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin-top:4px}
+.pt-page{color:var(--muted,#8a8378);font-size:.82rem;letter-spacing:.04em;text-decoration:underline;text-underline-offset:3px}
+.pt-page:hover{color:var(--gold)}
+.pt-price,.pm-price{color:var(--gold);font-weight:500;margin:2px 0 0}
+.pp-price{font-family:var(--f-display);font-size:clamp(1.4rem,2.4vw,1.9rem);color:var(--gold);margin:18px 0 4px}
+.pp-price-note{font-size:.9rem;opacity:.8;margin:6px 0 0}
+.pp-details{margin:18px 0 0;padding-left:1.1em;line-height:1.7}
+.pp-noimg{display:grid;place-items:center;aspect-ratio:4/3;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 16%,var(--card)),var(--card));font-family:var(--f-display);font-size:1.6rem;color:var(--gold);text-align:center;padding:24px}

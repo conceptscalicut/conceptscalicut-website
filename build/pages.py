@@ -25,7 +25,7 @@ SERVICES = [
 <li>Renovations of existing homes and apartments</li>
 </ul>
 <h2>How we work</h2>
-<p>It starts with a <strong>one-to-one meeting</strong> to understand each other. Within Calicut city limits we then <strong>visit your site free of charge</strong>, measure, look at how your family uses each room, and agree on scope and a working budget. Detailed project consultation is a paid professional service, and we explain its scope and fee up front. You then see the rooms in <strong>3D</strong> with an itemised quotation, and choose materials with real samples at our showroom in Chalappuram.</p>
+<p>It starts with a <strong>one-to-one meeting</strong> to understand each other. Within Calicut city limits we then <strong>visit your site free of charge</strong>, measure, look at how your family uses each room, and agree on scope and a working budget. Detailed project consultation is a paid professional service, and we explain its scope and fee up front. You then see the rooms in <strong>3D</strong> with an itemised quotation, and choose materials with real samples at our showroom near the railway station.</p>
 <p>Wherever your site has space, our carpenters build right there, so you can see the materials, the workmanship and the progress against the timeline in our proposal. If there is no room, the major work is done in our workshop, and installation and finishing are done at your site.</p>
 <p>Our management team brings several years of project experience from the GCC and India, which shows in how we plan, communicate and keep to schedule. We offer only what we can deliver, and we deliver everything we offer.</p>
 ''',
@@ -217,7 +217,7 @@ SERVICES = [
 </ul>
 <p><a class="link" href="../products.html">Browse all products</a></p>
 <h2>Visit us</h2>
-<p>In the heart of Calicut, just 500 m from Kozhikode railway station: St Patrick Church Building, near AKG Flyover, Pushpa Junction, Kozhikode 673002. Open Monday to Saturday, 9:30 am to 7:30 pm. Message us before you visit and we will keep samples ready.</p>
+<p>In the heart of Calicut, just 500 m from Kozhikode railway station: St Patrick Church Building, Francis Road, near Kozhikode Railway Station, Kozhikode 673002. Open Monday to Saturday, 9:30 am to 7:30 pm. Message us before you visit and we will keep samples ready.</p>
 ''',
  'photos':['img/wallpaper-tropical.jpg','img/mirror-oval.jpg','img/vases-black.jpg','img/frames.jpg','img/calligraphy-gold.jpg','img/curtain-poster.jpg'],
  'faqs':[

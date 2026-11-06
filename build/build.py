@@ -77,7 +77,7 @@ business = {
   "telephone":"+91-95443-55406",
   "email":C['email'],
   "foundingDate":"2020",
-  "address":{"@type":"PostalAddress","streetAddress":"St Patrick Church Building, near AKG Flyover, Pushpa Junction, Chalappuram","addressLocality":"Kozhikode","addressRegion":"Kerala","postalCode":"673002","addressCountry":"IN"},
+  "address":{"@type":"PostalAddress","streetAddress":"St Patrick Church Building, Francis Road, near Kozhikode Railway Station","addressLocality":"Kozhikode","addressRegion":"Kerala","postalCode":"673002","addressCountry":"IN"},
   "geo":{"@type":"GeoCoordinates","latitude":11.242428,"longitude":75.7844475},
   "hasMap":C['googleProfile'],
   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:30","closes":"19:30"}],
@@ -278,7 +278,7 @@ def footer(prefix):
     svc = ''.join(f'<li><a href="{prefix}services/{s["slug"]}.html">{esc(s["nav"])}</a></li>' for s in SERVICES)
     return f'''<footer class="site"><div class="wrap">
   <div><a class="brand" href="{prefix}"><img src="{prefix}img/logo-mark-gold.png" alt="" width="68" height="43"><span><b>CONCEPTS</b><small>Interiors &amp; Home Decor</small></span></a>
-  <p style="margin-top:16px;max-width:44ch">Concepts Enterprises. Interior design studio and home decor showroom in the heart of Calicut, 500 m from the railway station: St Patrick Church Building, near AKG Flyover, Pushpa Junction, Kozhikode, Kerala 673002.</p></div>
+  <p style="margin-top:16px;max-width:44ch">Concepts Enterprises. Interior design studio and home decor showroom in the heart of Calicut, 500 m from the railway station: St Patrick Church Building, Francis Road, near Kozhikode Railway Station, Kozhikode, Kerala 673002.</p></div>
   <div><h4>Services</h4><ul>{svc}</ul></div>
   <div><h4>Explore</h4><ul><li><a href="{prefix}#about">About us</a></li><li><a href="{prefix}products.html">Products</a></li><li><a href="{prefix}#projects">Projects</a></li><li><a href="{prefix}#reviews">Reviews</a></li><li><a href="{prefix}#faq">FAQ</a></li><li><a href="{prefix}journal/">Blog</a></li></ul></div>
   <div><h4>Reach us</h4><ul><li><a class="wa" href="https://wa.me/{C['whatsapp']}">WhatsApp {esc(C['phoneDisplay'])}</a></li><li><a href="tel:{C['phoneLink']}">Call {esc(C['phoneDisplay'])}</a></li><li><a href="mailto:{C['email']}">{C['email']}</a></li><li><a href="{C['instagram']}" target="_blank" rel="noopener">Instagram @conceptscalicut</a></li><li><a href="{C['facebook']}" target="_blank" rel="noopener">Facebook /conceptscalicut</a></li><li><a href="{C['reviewLink']}" target="_blank" rel="noopener">Review us on Google</a></li><li><a href="https://whatsapp.com/channel/0029Vagc6QdAYlUFE0jaHE2u" target="_blank" rel="noopener">WhatsApp Channel</a></li></ul></div>
@@ -435,7 +435,7 @@ open(os.path.join(DIST, 'llms.txt'), 'w', encoding='utf8').write(f'''# Concepts 
 > Interior design, build and home decor company in Kozhikode (Calicut), Kerala, India. Started in 2020 as a decor accessories store; now designs and builds residential and commercial interiors and runs a home decor showroom. Rated {G['rating']} on Google from {G['count']} reviews.
 
 ## Key facts
-- Address: St Patrick Church Building, near AKG Flyover, Pushpa Junction, Chalappuram, Kozhikode, Kerala 673002, India
+- Address: St Patrick Church Building, Francis Road, near Kozhikode Railway Station, Kozhikode, Kerala 673002, India
 - Hours: Monday to Saturday, 9:30 am to 7:30 pm. Closed Sunday.
 - WhatsApp / phone: {C['phoneDisplay']} (WhatsApp is the fastest way to reach the team)
 - Email: {C['email']}
