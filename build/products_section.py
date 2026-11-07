@@ -9,7 +9,7 @@ def _price_text(pr):
     p = pr.get('price')
     if not p: return ''
     unit = (' ' + pr['price_unit']) if pr.get('price_unit') else ''
-    return f'From ₹{int(p):,}{unit}'
+    return f'Approx. from ₹{int(p):,}{unit}'
 
 def tile(pr, g):
     pid = _pid(g, pr)
@@ -58,7 +58,7 @@ for idx, c in enumerate(site['catalog']):
 
 prod_body = ('<section class="phero"><div class="wrap">' + crumbs([("Home", "./"), ("Products", None)]) +
     '<div class="grid"><div><p class="eyebrow">Products · Showroom 500 m from Kozhikode railway station</p><h1>Interior and decor products</h1>'
-    '<p class="lede">The materials and finishing pieces we use in our own projects, in three collections. See them in person at our showroom in the heart of Calicut, or ask on WhatsApp for photos, sizes and prices.</p>'
+    '<p class="lede">The materials and finishing pieces we use in our own projects, in three collections. See them in person at our showroom in the heart of Calicut, or ask on WhatsApp for photos, sizes and prices.</p><p class="pp-price-note" style="margin-top:10px">Most of what we supply is customised to your space. Prices shown are approximate starting points; the final price depends on your requirements.</p>'
     f'<nav class="ctabs" aria-label="Collections">{tabs}</nav></div><img src="{site["catalog"][0]["cover"]}" alt="Interior products by Concepts" fetchpriority="high"></div></div></section>'
     + feat_html + cats_html +
     '<dialog class="pmodal" id="pmodal" aria-labelledby="pm-name"><div class="pm-inner">'
@@ -103,8 +103,8 @@ for c in site['catalog']:
                     + crumbs([("Home", "../"), ("Products", "../products.html"), (g['name'], f'../products.html#{g["id"]}'), (pr['name'], None)]) +
                     f'<div class="grid pp-grid"><div><p class="eyebrow">{esc(c["name"])} · {esc(g["name"])}</p><h1>{esc(pr["name"])}</h1>'
                     f'<p class="lede">{esc(pr.get("text", ""))}</p>'
-                    + (f'<p class="pp-price">{esc(price)}</p><p class="pp-price-note">Starting price. The final price depends on size, design and finish; ask us for an exact quote.</p>' if price else
-                       '<p class="pp-price-note">Ask us on WhatsApp or call for sizes, finishes and prices.</p>')
+                    + (f'<p class="pp-price">{esc(price)}</p><p class="pp-price-note">We specialise in customised work, so this is a rough guide. The final price depends on your requirements: size, design, features and finish. Message us for an exact quote.</p>' if price else
+                       '<p class="pp-price-note">We specialise in customised work, so prices depend on your requirements. Message us on WhatsApp or call for options and a quote.</p>')
                     + (f'<ul class="pp-details">{details}</ul>' if details else '') +
                     f'<div class="cta" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:26px"><a class="btn btn-gold wa" data-msg="{msg}" href="https://wa.me/{C["whatsapp"]}"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>'
                     f'<a class="btn btn-ghost" href="tel:{C["phoneLink"]}">Call {esc(C["phoneDisplay"])}</a></div></div>'
@@ -139,7 +139,7 @@ function show(i){var g=cur.g; if(!g.length){$('pm-img').hidden=true;return;} idx
   $('pm-count').textContent=g.length>1?(idx+1)+' / '+g.length:''; dlg.querySelectorAll('.pm-nav').forEach(function(b){b.hidden=g.length<2});
   [].forEach.call($('pm-thumbs').children,function(t,k){t.setAttribute('aria-current',k===idx)});}
 function open(pid){cur=D[pid]; if(!cur)return; var g=cur.g;
-  $('pm-grp').textContent=cur.grp; $('pm-name').textContent=cur.n; $('pm-text').textContent=cur.t; $('pm-price').textContent=cur.p||''; $('pm-price').hidden=!cur.p; $('pm-page').href=cur.u;
+  $('pm-grp').textContent=cur.grp; $('pm-name').textContent=cur.n; $('pm-text').textContent=cur.t; $('pm-price').textContent=cur.p?cur.p+' · customised to your requirements, so the final price may vary':''; $('pm-price').hidden=!cur.p; $('pm-page').href=cur.u;
   $('pm-details').innerHTML=(cur.d||[]).map(function(x){return '<li>'+esc(x)+'</li>'}).join(''); $('pm-details').hidden=!(cur.d||[]).length;
   $('pm-thumbs').innerHTML=g.length>1?g.map(function(s,k){return '<button type="button" data-k="'+k+'"><img src="'+esc(s)+'" alt="" loading="lazy"></button>'}).join(''):'';
   var msg='Hi Concepts, I am interested in '+cur.n+' ('+cur.grp+'). Please share options, sizes and prices.'; $('pm-wa').href='https://wa.me/'+WA+'?text='+encodeURIComponent(msg);
