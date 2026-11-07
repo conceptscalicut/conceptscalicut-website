@@ -400,6 +400,7 @@ window.SITE = {
           "products": [
             {
               "name": "Fabric Curtains",
+              "price": 350,
               "text": "M-track, eyelet and ripple curtains in a wide fabric range, stitched and installed to measure.",
               "img": "img/products/fabric-curtains.jpg",
               "gallery": [
@@ -414,6 +415,8 @@ window.SITE = {
             },
             {
               "name": "Window Blinds",
+              "price": 180,
+              "price_unit": "per sq ft",
               "text": "Zebra, roman, roller, venetian and vertical blinds for homes and offices.",
               "img": "img/products/window-blinds.jpg",
               "gallery": [
@@ -440,6 +443,8 @@ window.SITE = {
             },
             {
               "name": "Zebra Blinds",
+              "price": 110,
+              "price_unit": "per sq ft",
               "text": "Economical, stylish dual-layer blinds in many colours. Our most popular choice.",
               "img": "img/products/zebra-blinds.jpg",
               "gallery": [
@@ -524,6 +529,8 @@ window.SITE = {
           "products": [
             {
               "name": "LED Mirrors",
+              "price": 500,
+              "price_unit": "per sq ft",
               "text": "Backlit mirrors made to your size and shape, with touch switch and anti-fog options.",
               "img": "img/products/led-mirrors.jpg",
               "gallery": [
@@ -677,6 +684,7 @@ window.SITE = {
           "products": [
             {
               "name": "Water Purifiers",
+              "price": 8000,
               "text": "Indoor and large-scale outdoor water purifiers from Aquaguard (Eureka Forbes), AO Smith and VIRON."
             }
           ]
@@ -835,6 +843,7 @@ window.SITE = {
             },
             {
               "name": "Calligraphy Frames",
+              "price": 1500,
               "text": "Hand-made and printed calligraphy art, framed.",
               "img": "img/products/calligraphy-frames.jpg",
               "gallery": [
@@ -877,6 +886,8 @@ window.SITE = {
             },
             {
               "name": "Artificial Green Walls",
+              "price": 200,
+              "price_unit": "per piece",
               "text": "Leafy, floral and moss panels and mats for vertical gardens.",
               "img": "img/products/artificial-green-walls.jpg",
               "gallery": [
@@ -1032,6 +1043,7 @@ window.SITE = {
             },
             {
               "name": "Indoor & Outdoor LED Fittings",
+              "price": 600,
               "text": "Spotlights, downlights, panel lights and outdoor fittings for every space.",
               "img": "img/products/g/indoor-outdoor-led-fittings-w1.jpg",
               "gallery": [
@@ -1059,6 +1071,8 @@ window.SITE = {
           "products": [
             {
               "name": "Fancy Pendant & Hanging Lights",
+              "price": 500,
+              "price_unit": "per piece",
               "text": "Pendant lights, hanging sets and chandeliers for living, dining and restaurant spaces.",
               "img": "img/products/g/fancy-pendant-hanging-lights-w1.jpg",
               "gallery": [
@@ -1071,6 +1085,7 @@ window.SITE = {
             },
             {
               "name": "Pedestal Lamps",
+              "price": 2500,
               "text": "Floor lamps with turned wooden stands and fabric shades.",
               "img": "img/products/pedestal-lamps.jpg",
               "gallery": [
